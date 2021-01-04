@@ -29,4 +29,25 @@ public class World {
         }
         this.worldY = worldY;
     }
+
+
+
+    public boolean ifCorrectPosition(Position position){
+        return position.getPositionX() >= 0 && position.getPositionY() >= 0 && position.getPositionX() < worldX
+                && position.getPositionY() < worldY;
+    }
+
+    public ArrayList<Position> getNeighboringPositions(Position position){
+        ArrayList<Position> positions = new ArrayList<>();
+        for (int x = -1; x < 2; x++)
+            for (int y = -1; y < 2; y++){
+                Position pomPosition = new Position(position.getPositionX() + x,
+                        position.getPositionY() + y);
+                if (ifCorrectPosition(pomPosition) && !(x == 0 && y == 0)){
+                    positions.add(pomPosition);
+                }
+            }
+        return positions;
+    }
+
 }

@@ -1,5 +1,7 @@
 package Project;
 
+import java.util.ArrayList;
+
 public abstract class Organism{
     protected int power;
     protected int initiative;
@@ -18,7 +20,7 @@ public abstract class Organism{
     }
 
     public abstract void move();
-    public abstract void action();
+    public abstract ArrayList<Action> action();
     public abstract void initParams();
     public abstract Organism clone(Position newPosition);
 
@@ -28,17 +30,16 @@ public abstract class Organism{
         }
         return false;
     }
-
-    public Action consequences(Organism attackingOrganism){
+    public ArrayList<Action> consequences(Organism attackingOrganism){
         Position position = new Position(-1, -1);
-        Action action;
+        ArrayList<Action> actions = new ArrayList<>();
         if (this.power > attackingOrganism.power){
-            action = new Action(ActionEnum.A_REMOVE, position, 0, attackingOrganism);
+            actions.add(new Action(ActionEnum.A_REMOVE, position, 0, attackingOrganism));
         }
         else{
-            action = new Action(ActionEnum.A_REMOVE, position, 0, this);
+            actions.add(new Action(ActionEnum.A_REMOVE, position, 0, this));
         }
-        return action;
+        return actions;
     }
 
     @Override
