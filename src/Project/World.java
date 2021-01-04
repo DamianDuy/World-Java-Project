@@ -1,53 +1,84 @@
 package Project;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class World {
-    private int worldX;
-    private int worldY;
-    private int turn;
-    private ArrayList<Organism> organisms = new ArrayList<Organism>();
-    private ArrayList<Organism> newOrganisms = new ArrayList<Organism>();
-    private char separator = '.';
-    World(int worldX, int worldY){
-        setTurn();
-        setWorldX(worldX);
-        setWorldY(worldY);
-    }
-    public void setTurn(){
-        this.turn = 0;
-    }
-    public void setWorldX(int worldX){
-        if (worldX < 0){
-            throw new IllegalArgumentException("Negative X size.");
+    private final int width;
+    private final int height;
+    private int turnCounter = 0;
+    private final char separator = '.';
+    private final Map<Position, Organism> map;
+    private final Set<Organism> organisms = new TreeSet<>(new OrganismComparator());
+    private final WorldVisitor visitor = new WorldVisitor(this);
+
+    World(int width, int height) {
+        this.width = width;
+        this.height = height;
+        this.map = new HashMap<>();
+
+        for (int x = 0; x < this.width; x++) {
+            for (int y = 0; y < this.height; y++) {
+                this.map.put(new Position(x, y), null);
+            }
         }
-        this.worldX = worldX;
     }
-    public void setWorldY(int worldY){
-        if (worldY < 0){
-            throw new IllegalArgumentException("Negative Y size.");
+
+    public void makeTurn() {
+        for (Organism o : this.organisms) {
+            List<Action> actions = o.move();
+
+            for (Action a : actions) {
+                a.accept(this.visitor);
+            }
         }
-        this.worldY = worldY;
+
+        this.turnCounter++;
     }
 
-
-
-    public boolean ifCorrectPosition(Position position){
-        return position.getPositionX() >= 0 && position.getPositionY() >= 0 && position.getPositionX() < worldX
-                && position.getPositionY() < worldY;
+    public void move(Organism organism, Position destination) {
+        if (this.isCorrectPosition(destination)) {
+            this.map.put(organism.getPosition(), null);
+            this.map.put(destination, organism);
+            organism.setPosition(destination);
+        }
     }
 
-    public ArrayList<Position> getNeighboringPositions(Position position){
+    public void addOrganism(Organism organism) {
+        Position position = organism.getPosition();
+
+        if (this.isCorrectPosition(position)) {
+            this.map.put(position, organism);
+            this.organisms.add(organism);
+        }
+    }
+
+    public List<Position> getFreeNeighborPositions(Position position) {
         ArrayList<Position> positions = new ArrayList<>();
-        for (int x = -1; x < 2; x++)
-            for (int y = -1; y < 2; y++){
-                Position pomPosition = new Position(position.getPositionX() + x,
-                        position.getPositionY() + y);
-                if (ifCorrectPosition(pomPosition) && !(x == 0 && y == 0)){
-                    positions.add(pomPosition);
+
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dy = -1; dy <= 1; dy++) {
+                if (dx == 0 && dy == 0) {
+                    continue;
+                }
+
+                Position p = new Position(position.getX() + dx, position.getY() + dy);
+
+                if (this.isCorrectPosition(p)) {
+                    positions.add(p);
                 }
             }
+        }
+
         return positions;
     }
 
+    private boolean isCorrectPosition(Position position) {
+        return this.map.containsKey(position);
+    }
 }

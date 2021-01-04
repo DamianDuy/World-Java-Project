@@ -1,42 +1,46 @@
 package Project;
 
+import java.util.Objects;
+
 public class Position {
-    private int positionX;
-    private int positionY;
-    Position(int positionX, int positionY){
-        setPositionX(positionX);
-        setPositionY(positionY);
+    private final int x;
+    private final int y;
+
+    Position(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 
-    public int getPositionX() {
-        return positionX;
+    public int getX() {
+        return x;
     }
 
-    public void setPositionX(int positionX) {
-        if (positionX < 0){
-            throw new IllegalArgumentException("Negative X position.");
-        }
-        this.positionX = positionX;
+    public int getY() {
+        return y;
     }
 
-    public int getPositionY() {
-        return positionY;
-    }
-
-    public void setPositionY(int positionY) {
-        if (positionY < 0){
-            throw new IllegalArgumentException("Negative Y position.");
-        }
-        this.positionY = positionY;
-    }
-    public boolean equals(Position o){
-        if (o.getPositionX() == this.getPositionX() && o.getPositionY() == this.getPositionY()){
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
             return true;
         }
-        return false;
+
+        if (!(other instanceof Position)) {
+            return false;
+        }
+
+        Position otherPosition = (Position) other;
+
+        return otherPosition.x == this.x && otherPosition.y == this.y;
     }
+
     @Override
-    public String toString(){
-        return String.format(positionX + ", " + positionY);
+    public int hashCode() {
+        return Objects.hash(this.x, this.y);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("(" + this.x + ", " + this.y + ")");
     }
 }
