@@ -32,7 +32,7 @@ public abstract class Organism {
         return Arrays.asList(new RemoveAction(attacker));
     }
 
-    // public abstract Organism clone(Position newPosition);
+    public abstract Organism reproduce(Position newPosition);
 
     protected abstract void initialize();
 
@@ -66,6 +66,10 @@ public abstract class Organism {
 
     public boolean isStrongerThan(Organism other) {
         return this.power > other.power;
+    }
+
+    public void lowerPowerAfterReproduce(){
+        this.power /= 2;
     }
 
     // public ArrayList<Action> consequences(Organism attacker) {

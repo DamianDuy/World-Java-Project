@@ -11,4 +11,7 @@ public class Wolf extends Animal{
         this.powerToReproduce = 16;
         this.sign = 'W';
     }
+    public Organism reproduce(Position newPosition){
+        return new Wolf(this.world, newPosition);
+    }
 }

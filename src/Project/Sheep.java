@@ -11,4 +11,7 @@ public class Sheep extends Animal{
         this.powerToReproduce = 6;
         this.sign = 'S';
     }
+    public Organism reproduce(Position newPosition){
+        return new Sheep(this.world, newPosition);
+    }
 }

@@ -100,6 +100,27 @@ public class World {
         return positions;
     }
 
+    public List<Position> getNeighboringFreePositions(Organism organism) {
+        ArrayList<Position> positions = new ArrayList<>();
+        Position position = organism.getPosition();
+
+        for (int dx = -1; dx <= 1; dx++) {
+            for (int dy = -1; dy <= 1; dy++) {
+                if (dx == 0 && dy == 0) {
+                    continue;
+                }
+
+                Position p = new Position(position.getX() + dx, position.getY() + dy);
+
+                if (this.isPositionCorrect(p) && this.isPositionFree(p)) {
+                    positions.add(p);
+                }
+            }
+        }
+
+        return positions;
+    }
+
     private boolean isPositionCorrect(Position position) {
         return this.map.containsKey(position);
     }

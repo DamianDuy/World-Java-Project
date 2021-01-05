@@ -12,4 +12,7 @@ public class Grass extends Plant {
         this.powerToReproduce = 3;
         this.sign = 'G';
     }
+    public Organism reproduce(Position newPosition){
+        return new Grass(this.world, newPosition);
+    }
 }
