@@ -36,6 +36,8 @@ public abstract class Organism {
 
     protected abstract void initialize();
 
+    public abstract void vitals();
+
     public int getInitiative() {
         return initiative;
     }

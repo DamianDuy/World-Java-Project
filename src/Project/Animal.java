@@ -39,4 +39,10 @@ public abstract class Animal extends Organism {
 
         return actions;
     }
+
+    @Override
+    public void vitals(){
+        this.lifespan--;
+        this.power++;
+    }
 }

@@ -44,9 +44,19 @@ public class World {
 
     public void makeTurn() {
         for (Organism o : this.organisms) {
-            List<Action> actions = o.move();
+            List<Action> actionsMove = o.move();
 
-            this.dispatchActions(actions);
+            this.dispatchActions(actionsMove);
+        }
+
+        for (Organism o : this.organisms) {
+            o.vitals();
+        }
+
+        for (Organism o : this.organisms) {
+            List<Action> actionsAct = o.action();
+
+            this.dispatchActions(actionsAct);
         }
 
         this.turnCounter++;
