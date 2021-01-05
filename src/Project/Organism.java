@@ -25,7 +25,7 @@ public abstract class Organism {
     public abstract List<Action> action();
 
     public List<Action> defend(Organism attacker) {
-        if (attacker.power > this.power) {
+        if (!isStrongerThan(attacker)) {
             return Arrays.asList(new RemoveAction(this));
         }
 
