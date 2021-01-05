@@ -14,7 +14,20 @@ public class World {
     private int turnCounter = 0;
     private final char separator = '.';
     private final Map<Position, Organism> map;
-    private final Set<Organism> organisms = new TreeSet<>(new OrganismComparator());
+    private final Set<Organism> organisms = new TreeSet<>(new Comparator<Organism>() {
+        @Override
+        public int compare(Organism o1, Organism o2) {
+            if (o1.getInitiative() > o2.getInitiative()) {
+                return 1;
+            }
+
+            if (o2.getInitiative() < o2.getInitiative()) {
+                return -1;
+            }
+
+            return 0;
+        }
+    });
     private final WorldVisitor visitor = new WorldVisitor(this);
 
     World(int width, int height) {
@@ -33,33 +46,42 @@ public class World {
         for (Organism o : this.organisms) {
             List<Action> actions = o.move();
 
-            for (Action a : actions) {
-                a.accept(this.visitor);
-            }
+            this.dispatchActions(actions);
         }
 
         this.turnCounter++;
     }
 
     public void move(Organism organism, Position destination) {
-        if (this.isCorrectPosition(destination)) {
-            this.map.put(organism.getPosition(), null);
-            this.map.put(destination, organism);
-            organism.setPosition(destination);
+        if (this.isPositionCorrect(destination)) {
+            Organism defender = this.map.get(destination);
+
+            if (defender == null) {
+                this.moveOrganism(organism, destination);
+            } else if (!organism.getClass().equals(defender.getClass())) {
+                List<Action> actions = defender.defend(organism);
+
+                this.dispatchActions(actions);
+
+                if (organism.isAlive()) {
+                    this.moveOrganism(organism, destination);
+                }
+            }
         }
     }
 
     public void addOrganism(Organism organism) {
         Position position = organism.getPosition();
 
-        if (this.isCorrectPosition(position)) {
+        if (this.isPositionCorrect(position) && this.isPositionFree(position)) {
             this.map.put(position, organism);
             this.organisms.add(organism);
         }
     }
 
-    public List<Position> getFreeNeighborPositions(Position position) {
+    public List<Position> getPossibleMovePositions(Organism organism) {
         ArrayList<Position> positions = new ArrayList<>();
+        Position position = organism.getPosition();
 
         for (int dx = -1; dx <= 1; dx++) {
             for (int dy = -1; dy <= 1; dy++) {
@@ -69,7 +91,7 @@ public class World {
 
                 Position p = new Position(position.getX() + dx, position.getY() + dy);
 
-                if (this.isCorrectPosition(p)) {
+                if (this.isPositionCorrect(p)) {
                     positions.add(p);
                 }
             }
@@ -78,7 +100,23 @@ public class World {
         return positions;
     }
 
-    private boolean isCorrectPosition(Position position) {
+    private boolean isPositionCorrect(Position position) {
         return this.map.containsKey(position);
+    }
+
+    private boolean isPositionFree(Position position) {
+        return this.map.get(position) == null;
+    }
+
+    private void dispatchActions(List<Action> actions) {
+        for (Action a : actions) {
+            a.accept(this.visitor);
+        }
+    }
+
+    private void moveOrganism(Organism organism, Position destination) {
+        this.map.put(organism.getPosition(), null);
+        this.map.put(destination, organism);
+        organism.setPosition(destination);
     }
 }
