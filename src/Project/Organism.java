@@ -12,6 +12,7 @@ public abstract class Organism {
     protected World world;
     protected Position position;
     private boolean alive = true;
+    private boolean isFrozen = false;
 
     Organism(World world, Position position) {
         this.world = world;
@@ -25,11 +26,11 @@ public abstract class Organism {
     public abstract List<Action> action();
 
     public List<Action> defend(Organism attacker) {
-        if (!isStrongerThan(attacker)) {
-            return Arrays.asList(new RemoveAction(this));
+        if (isStrongerThan(attacker)) {
+            return Arrays.asList(new RemoveAction(attacker));
         }
 
-        return Arrays.asList(new RemoveAction(attacker));
+        return Arrays.asList(new RemoveAction(this));
     }
 
     public abstract Organism reproduce(Position newPosition);
@@ -46,7 +47,7 @@ public abstract class Organism {
         return position;
     }
 
-    public char getSign() { return sign;}
+    public char getSign() { return sign; }
 
     public void setPosition(Position newPosition) {
         this.position = newPosition;
@@ -54,6 +55,10 @@ public abstract class Organism {
 
     public boolean isAlive() {
         return alive;
+    }
+
+    public boolean isDead() {
+        return !alive;
     }
 
     public void kill() {
@@ -64,6 +69,10 @@ public abstract class Organism {
         this.power = newPower;
     }
 
+    public void freeze() {
+        isFrozen = true;
+    }
+
     public boolean canReproduce() {
         return power >= powerToReproduce;
     }
@@ -72,26 +81,17 @@ public abstract class Organism {
         return this.power > other.power;
     }
 
-    public void lowerPowerAfterReproduce(){
+    public void lowerPowerAfterReproduce() {
         this.power /= 2;
     }
 
-    // public ArrayList<Action> consequences(Organism attacker) {
-    // Position position = new Position(-1, -1);
-    // ArrayList<Action> actions = new ArrayList<>();
-
-    // if (isStrongerThan(attacker)) {
-    // actions.add(new Action(ActionType.REMOVE, position, attacker, 0));
-    // } else {
-    // actions.add(new Action(ActionType.REMOVE, position, this, 0));
-    // }
-
-    // return actions;
-    // }
-
     @Override
     public String toString() {
-        return String.format("Organism: power: " + power + " initiative: " + initiative + " lifespan: " + lifespan
-                + " position: " + position);
+        return String.format(
+            "Organism %s [position = %s, lifespan = %d]",
+            this.getClass().getSimpleName(),
+            this.position.toString(),
+            this.lifespan
+        );
     }
 }

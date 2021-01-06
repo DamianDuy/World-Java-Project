@@ -1,7 +1,7 @@
 package Project;
 
-public class Grass extends Plant {
-    Grass(World world, Position position) {
+public class Dandelion extends Plant {
+    Dandelion(World world, Position position) {
         super(world, position);
     }
 
@@ -10,12 +10,12 @@ public class Grass extends Plant {
         this.power = 0;
         this.initiative = 0;
         this.lifespan = 6;
-        this.powerToReproduce = 3;
-        this.sign = 'G';
+        this.powerToReproduce = 2;
+        this.sign = 'D';
     }
 
     @Override
     public Organism reproduce(Position newPosition) {
-        return new Grass(this.world, newPosition);
+        return new Dandelion(this.world, newPosition);
     }
 }

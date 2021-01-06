@@ -9,9 +9,14 @@ public class OrganismComparator implements Comparator<Organism> {
             return -1;
         }
 
-        if (o2.getInitiative() < o2.getInitiative()) {
+        if (o1.getInitiative() < o2.getInitiative()) {
             return 1;
         }
-        return 0;
+
+        if (o1 == o2) {
+            return 0;
+        }
+
+        return 1;
     }
 }

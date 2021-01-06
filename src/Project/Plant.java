@@ -19,21 +19,30 @@ public abstract class Plant extends Organism {
     public List<Action> action() {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
-        List<Position> positions = world.getNeighboringFreePositions(this);
-        if (canReproduce() && !positions.isEmpty()) {
-            Position positionRand = positions.get(rand.nextInt(positions.size()));
-            Organism newOrganism = this.reproduce(positionRand);
-            this.lowerPowerAfterReproduce();
-            AddAction addAction = new AddAction(newOrganism);
-            actions.add(addAction);
+
+        if (isAlive() && canReproduce()) {
+            List<Position> positions = this.world.getFreeNeighborPositions(this);
+
+            if (!positions.isEmpty()) {
+                Position position = positions.get(rand.nextInt(positions.size()));
+                Organism newOrganism = this.reproduce(position);
+                AddAction addAction = new AddAction(newOrganism);
+
+                this.lowerPowerAfterReproduce();
+                actions.add(addAction);
+            }
         }
 
         return actions;
     }
 
     @Override
-    public void vitals(){
+    public void vitals() {
         this.lifespan--;
         this.power++;
+
+        if (this.lifespan <= 0) {
+            this.kill();
+        }
     }
 }

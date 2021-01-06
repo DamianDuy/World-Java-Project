@@ -9,7 +9,7 @@ public class WorldVisitor implements ActionVisitor {
 
     @Override
     public void visit(MoveAction action) {
-        world.move(action.getOrganism(), action.getDestination());
+        world.moveOrganism(action.getOrganism(), action.getDestination());
     }
 
     @Override

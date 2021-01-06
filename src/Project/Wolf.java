@@ -1,9 +1,11 @@
 package Project;
 
-public class Wolf extends Animal{
-    Wolf(World world, Position position){
+public class Wolf extends Animal {
+    Wolf(World world, Position position) {
         super(world, position);
     }
+
+    @Override
     public void initialize() {
         this.power = 8;
         this.initiative = 5;
@@ -11,7 +13,9 @@ public class Wolf extends Animal{
         this.powerToReproduce = 16;
         this.sign = 'W';
     }
-    public Organism reproduce(Position newPosition){
+
+    @Override
+    public Organism reproduce(Position newPosition) {
         return new Wolf(this.world, newPosition);
     }
 }
