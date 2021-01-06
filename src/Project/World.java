@@ -43,6 +43,9 @@ public class World {
     }
 
     public void makeTurn() {
+        if (turnCounter == 0){
+            drawMap();
+        }
         for (Organism o : this.organisms) {
             List<Action> actionsMove = o.move();
 
@@ -53,6 +56,8 @@ public class World {
             o.vitals();
         }
 
+        clearDead();
+
         for (Organism o : this.organisms) {
             List<Action> actionsAct = o.action();
 
@@ -60,6 +65,7 @@ public class World {
         }
 
         this.turnCounter++;
+        drawMap();
     }
 
     public void move(Organism organism, Position destination) {
@@ -139,6 +145,10 @@ public class World {
         return this.map.get(position) == null;
     }
 
+    private Organism getOrganism(Position position) {
+        return this.map.get(position);
+    }
+
     private void dispatchActions(List<Action> actions) {
         for (Action a : actions) {
             a.accept(this.visitor);
@@ -149,5 +159,45 @@ public class World {
         this.map.put(organism.getPosition(), null);
         this.map.put(destination, organism);
         organism.setPosition(destination);
+    }
+
+    private void clearDead(){
+        for (Organism o : organisms){
+            if(!o.isAlive()){
+                Position position = o.getPosition();
+                this.organisms.remove(o);
+                this.map.put(position, null);
+            }
+        }
+    }
+
+    private void drawMap(){
+        System.out.println(turnCounter);
+        for (int i = 0; i < this.width + 2; i++){
+            System.out.print('-');
+        }
+        System.out.println();
+        for (int y = 0; y < this.height + 2; y++){
+            System.out.print('|');
+            for (int x = 0; x < this.width + 2; x++) {
+                if (x < width && y < height) {
+                    Position position = new Position(x, y);
+                    if (isPositionFree(position)) {
+                        System.out.print(" ");
+                    } else {
+                        System.out.print(getOrganism(position).getSign());
+                    }
+                }
+                else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.print('|');
+            System.out.println();
+        }
+        for (int i = 0; i < this.width + 2; i++){
+            System.out.print('-');
+        }
+        System.out.println();
     }
 }

@@ -46,6 +46,8 @@ public abstract class Organism {
         return position;
     }
 
+    public char getSign() { return sign;}
+
     public void setPosition(Position newPosition) {
         this.position = newPosition;
     }
