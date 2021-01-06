@@ -1,12 +1,6 @@
 package Project;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class World {
     private final int width;
@@ -162,14 +156,16 @@ public class World {
     }
 
     private void clearDead(){
-        for (Organism o : organisms){
-            if(!o.isAlive()){
+        Iterator <Organism> i = organisms.iterator();
+        while (i.hasNext()){
+            Organism o = i.next();
+            if (!o.isAlive()){
                 Position position = o.getPosition();
-                this.organisms.remove(o);
+                i.remove();
                 this.map.put(position, null);
-            }
+            } 
         }
-    }
+    }  
 
     private void drawMap(){
         System.out.println(turnCounter);
