@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class OrganismComparatorTest {
     @Test
-    public void comparingDifferentOrganismsTest() {
+    public void compareDifferentOrganismsTest() {
         World world = new World(6, 6);
         Grass grass = new Grass(world, new Position(1, 1));
         Sheep sheep = new Sheep(world, new Position(2, 2));
@@ -31,7 +31,7 @@ public class OrganismComparatorTest {
     }
 
     @Test
-    public void comparingSameOrganismsTest() {
+    public void compareSameOrganismsTest() {
         World world = new World(6, 6);
         Sheep sheep1 = new Sheep(world, new Position(1, 1));
         Sheep sheep2 = new Sheep(world, new Position(2, 2));
