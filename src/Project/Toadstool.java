@@ -5,25 +5,19 @@ import java.util.List;
 
 public class Toadstool extends Plant {
     Toadstool(World world, Position position) {
-        super(world, position);
+        super(world, position, new OrganismStats(0, 4, 0, 12, 'T'));
     }
 
     @Override
-    public void initialize() {
-        this.power = 0;
-        this.initiative = 0;
-        this.lifespan = 12;
-        this.powerToReproduce = 4;
-        this.sign = 'T';
-    }
-
-    @Override
-    public Organism reproduce(Position newPosition) {
+    public Organism createChild(Position newPosition) {
         return new Toadstool(this.world, newPosition);
     }
 
     @Override
     public List<Action> defend(Organism attacker) {
-        return Arrays.asList(new RemoveAction(attacker), new RemoveAction(this));
+        return Arrays.asList(
+            new DieAction(attacker, DeathCause.TOADSTOOL),
+            new DieAction(this, DeathCause.KILLED)
+        );
     }
 }

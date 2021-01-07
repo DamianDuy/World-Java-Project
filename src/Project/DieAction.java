@@ -1,20 +1,20 @@
 package Project;
 
-public class IncreasePowerAction implements Action {
-    private final int boost;
+public class DieAction implements Action {
     private final Organism organism;
+    private final DeathCause deathCause;
 
-    IncreasePowerAction(Organism organism, int boost) {
+    DieAction(Organism organism, DeathCause deathCause) {
         this.organism = organism;
-        this.boost = boost;
+        this.deathCause = deathCause;
     }
 
     public Organism getOrganism() {
         return this.organism;
     }
 
-    public int getBoost() {
-        return this.boost;
+    public DeathCause getDeathCause() {
+        return this.deathCause;
     }
 
     @Override

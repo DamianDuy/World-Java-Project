@@ -6,30 +6,17 @@ import java.util.List;
 import java.util.Random;
 
 public class Alien extends Organism {
-
-    Alien(World world, Position position){
-        super(world, position);
+    Alien(World world, Position position) {
+        super(world, position, new OrganismStats(0, 0, 0, 1, 'A'));
     }
     
     @Override
-    public Organism reproduce(Position newPosition){
+    public Organism createChild(Position newPosition) {
         return new Alien(this.world, newPosition);
     }
 
     @Override
-    protected void initialize(){
-        this.power = 0;
-        this.initiative = 0;
-        this.lifespan = 1;
-        this.powerToReproduce = 0;
-        this.sign = 'A';
-    }
-
-    @Override
-    public void vitals(){}
-
-    @Override
-    public List<Action> move(){
+    public List<Action> move() {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
         List<Position> positions = this.world.getFreeNeighborPositions(this);
@@ -44,7 +31,12 @@ public class Alien extends Organism {
     }
 
     @Override
-    public List<Action> action(){
+    public List<Action> action() {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public List<Action> vitalize(){
         return Collections.emptyList();
     }
 }

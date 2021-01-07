@@ -70,31 +70,6 @@ public class Board {
         return this.selectNeighbors(position, p -> this.map.containsKey(p) && this.map.get(p) == null);
     }
 
-    public void print() {
-        System.out.printf("+%s+\n", "-".repeat(this.width));
-
-        for (Map.Entry<Position, Organism> entry : this.map.entrySet()) {
-            Position p = entry.getKey();
-            Organism o = entry.getValue();
-
-            if (p.getX() == 0) {
-                System.out.print('|');
-            }
-
-            if (o == null || o.isDead()) {
-                System.out.print(this.separator);
-            } else {
-                System.out.print(o.getSign());
-            }
-
-            if (p.getX() == this.width - 1) {
-                System.out.println('|');
-            }
-        }
-
-        System.out.printf("+%s+\n", "-".repeat(this.width));
-    }
-
     public Position assertCorrectPosition(Position position) {
         final Position p = Objects.requireNonNull(position);
 
@@ -110,6 +85,37 @@ public class Board {
         }
 
         return p;
+    }
+    
+    @Override
+    public String toString() {
+        final StringBuffer buffer = new StringBuffer((this.width + 1) * (this.height + 1));
+
+        buffer.append(String.format("+%s+\n", "-".repeat(this.width)));
+
+        for (Map.Entry<Position, Organism> entry : this.map.entrySet()) {
+            Position p = entry.getKey();
+            Organism o = entry.getValue();
+
+            if (p.getX() == 0) {
+                buffer.append('|');
+            }
+
+            if (o == null || o.isDead()) {
+                buffer.append(this.separator);
+            } else {
+                buffer.append(o.getStats().getSign());
+            }
+
+            if (p.getX() == this.width - 1) {
+                buffer.append('|');
+                buffer.append('\n');
+            }
+        }
+
+        buffer.append(String.format("+%s+\n", "-".repeat(this.width)));
+
+        return buffer.toString();
     }
 
     private List<Position> selectNeighbors(Position position, Predicate<Position> predicate) {

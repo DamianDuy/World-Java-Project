@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Random;
 
 public abstract class Plant extends Organism {
-    Plant(World world, Position position) {
-        super(world, position);
+    Plant(World world, Position position, OrganismStats stats) {
+        super(world, position, stats);
     }
 
     @Override
@@ -25,24 +25,14 @@ public abstract class Plant extends Organism {
 
             if (!positions.isEmpty()) {
                 Position position = positions.get(rand.nextInt(positions.size()));
-                Organism newOrganism = this.reproduce(position);
-                AddAction addAction = new AddAction(newOrganism);
+                Organism newOrganism = this.createChild(position);
+                DeliverAction addAction = new DeliverAction(newOrganism);
 
-                this.lowerPowerAfterReproduce();
+                this.stats.halfPower();
                 actions.add(addAction);
             }
         }
 
         return actions;
-    }
-
-    @Override
-    public void vitals() {
-        this.lifespan--;
-        this.power++;
-
-        if (this.lifespan <= 0) {
-            this.kill();
-        }
     }
 }

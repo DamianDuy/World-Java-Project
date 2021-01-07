@@ -2,20 +2,11 @@ package Project;
 
 public class Grass extends Plant {
     Grass(World world, Position position) {
-        super(world, position);
+        super(world, position, new OrganismStats(0, 3, 0, 6, 'G'));
     }
 
     @Override
-    public void initialize() {
-        this.power = 0;
-        this.initiative = 0;
-        this.lifespan = 6;
-        this.powerToReproduce = 3;
-        this.sign = 'G';
-    }
-
-    @Override
-    public Organism reproduce(Position newPosition) {
+    public Organism createChild(Position newPosition) {
         return new Grass(this.world, newPosition);
     }
 }

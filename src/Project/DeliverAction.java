@@ -1,9 +1,9 @@
 package Project;
 
-public class AddAction implements Action {
+public class DeliverAction implements Action {
     private final Organism organism;
 
-    AddAction(Organism organism) {
+    DeliverAction(Organism organism) {
         this.organism = organism;
     }
 

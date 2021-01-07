@@ -2,8 +2,7 @@ package Project;
 
 import org.junit.Test;
 
-import java.util.TreeSet;
-
+import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WorldTest {
@@ -51,7 +50,7 @@ public class WorldTest {
         world.addOrganism(sheep);
         world.addOrganism(wolf);
         world.moveOrganism(wolf, position1);
-        assertEquals(false,sheep.isAlive());
+        assertFalse(sheep.isAlive());
     }
     @Test
     public void deathFromOldAge() {
@@ -63,7 +62,7 @@ public class WorldTest {
         for (int i = 0; i < 6; i++){
             world.makeTurn();
         }
-        assertEquals(false, grass.isAlive());
+        assertFalse(grass.isAlive());
     }
     @Test
     public void attackerEatingToadstool() {
@@ -75,6 +74,6 @@ public class WorldTest {
         world.addOrganism(toadstool);
         world.addOrganism(wolf);
         world.moveOrganism(wolf, position1);
-        assertEquals(false,wolf.isAlive());
+        assertFalse(wolf.isAlive());
     }
 }

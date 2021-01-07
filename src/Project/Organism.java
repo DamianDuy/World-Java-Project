@@ -1,97 +1,100 @@
 package Project;
 
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Organism {
-    protected int power;
-    protected int powerToReproduce;
-    protected int initiative;
-    protected int lifespan;
-    protected char sign;
-    protected World world;
+    protected final OrganismStats stats;
+    protected final World world;
     protected Position position;
     private boolean alive = true;
     private boolean isFrozen = false;
 
-    Organism(World world, Position position) {
+    Organism(World world, Position position, OrganismStats stats) {
         this.world = world;
         this.position = position;
-
-        this.initialize();
+        this.stats = stats;
     }
+
+    public abstract Organism createChild(Position newPosition);
 
     public abstract List<Action> move();
 
     public abstract List<Action> action();
 
-    public List<Action> defend(Organism attacker) {
-        if (isStrongerThan(attacker)) {
-            return Arrays.asList(new RemoveAction(attacker));
+    public List<Action> vitalize() {
+        List<Action> actions = new ArrayList<>();
+
+        this.stats.increaseAge();
+        this.stats.boostPower(1);
+
+        if (this.stats.getLifespan() <= 0) {
+            actions.add(new DieAction(this, DeathCause.OLD_AGE));
         }
 
-        return Arrays.asList(new RemoveAction(this));
+        return actions;
     }
 
-    public abstract Organism reproduce(Position newPosition);
+    public List<Action> defend(Organism attacker) {
+        if (isStrongerThan(attacker)) {
+            return Arrays.asList(new DieAction(attacker, DeathCause.KILLED));
+        }
 
-    protected abstract void initialize();
+        return Arrays.asList(new DieAction(this, DeathCause.KILLED));
+    }
 
-    public abstract void vitals();
-
-    public int getInitiative() {
-        return initiative;
+    public OrganismStats getStats() {
+        return this.stats;
     }
 
     public Position getPosition() {
-        return position;
+        return this.position;
     }
-
-    public char getSign() { return sign; }
 
     public void setPosition(Position newPosition) {
         this.position = newPosition;
     }
 
     public boolean isAlive() {
-        return alive;
+        return this.alive;
     }
 
     public boolean isDead() {
-        return !alive;
+        return !this.alive;
+    }
+
+    public String name() {
+        return this.getClass().getSimpleName();
     }
 
     public void kill() {
-        alive = false;
-    }
-
-    public void setPower(int newPower) {
-        this.power = newPower;
+        this.alive = false;
     }
 
     public void freeze() {
-        isFrozen = true;
+        this.isFrozen = true;
+    }
+
+    public void defreeze() {
+        this.isFrozen = false;
     }
 
     public boolean canReproduce() {
-        return power >= powerToReproduce;
+        return this.stats.getPower() >= this.stats.getPowerToReproduce();
     }
 
     public boolean isStrongerThan(Organism other) {
-        return this.power > other.power;
-    }
-
-    public void lowerPowerAfterReproduce() {
-        this.power /= 2;
+        return this.stats.getPower() > other.stats.getPower();
     }
 
     @Override
     public String toString() {
         return String.format(
             "Organism %s [position = %s, lifespan = %d]",
-            this.getClass().getSimpleName(),
+            this.name(),
             this.position.toString(),
-            this.lifespan
+            this.stats.getLifespan()
         );
     }
 }
