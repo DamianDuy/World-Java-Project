@@ -23,17 +23,19 @@ public class World {
 
     public void makeTurn() {
         if (!this.started) {
-            throw new RuntimeException("Cannot make turn without starting the world first");
+            throw new RuntimeException("Cannot make turn without starting the world first.");
         }
 
         this.makeMoves();
-        this.vitalize();
         System.out.println("After moves:");
         this.print();
         this.makeActions();
-        this.purgeDead();
         System.out.println("After actions:");
         this.print();
+        this.vitalize();
+        System.out.println("After lowering life span: ");
+        this.print();
+        this.purgeDead();
         System.out.println("=".repeat(64));
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
