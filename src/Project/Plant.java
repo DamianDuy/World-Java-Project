@@ -20,7 +20,7 @@ public abstract class Plant extends Organism {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
 
-        if (isAlive() && canReproduce()) {
+        if (isAlive() && canReproduce() && !frozen()) {
             List<Position> positions = this.world.getFreeNeighborPositions(this);
 
             if (!positions.isEmpty()) {

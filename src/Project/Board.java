@@ -2,6 +2,7 @@ package Project;
 
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Board {
     private final int width;
@@ -62,12 +63,34 @@ public class Board {
         this.map.put(p, null);
     }
 
+    public List<Organism> getNeighborOrganisms(Position position, int radius) {
+        return this.selectNeighbors(
+                position,
+                p -> this.map.containsKey(p) && this.map.get(p) != null,
+                radius
+            )
+            .stream()
+            .map(p -> this.map.get(p))
+            .collect(Collectors.toList());
+    }
+
     public List<Position> getNeighborPositions(Position position) {
         return this.selectNeighbors(position, p -> this.map.containsKey(p));
     }
 
     public List<Position> getNeighborFreePositions(Position position) {
-        return this.selectNeighbors(position, p -> this.map.containsKey(p) && this.map.get(p) == null);
+        return this.selectNeighbors(
+            position,
+            p -> this.map.containsKey(p) && this.map.get(p) == null
+        );
+    }
+
+    public List<Position> getAllFreePositions() {
+        return this.map.entrySet()
+            .stream()
+            .filter(entry -> entry.getValue() == null)
+            .map(entry -> entry.getKey())
+            .collect(Collectors.toList());
     }
 
     public Position assertCorrectPosition(Position position) {
@@ -119,11 +142,15 @@ public class Board {
     }
 
     private List<Position> selectNeighbors(Position position, Predicate<Position> predicate) {
+        return this.selectNeighbors(position, predicate, 1);
+    }
+
+    private List<Position> selectNeighbors(Position position, Predicate<Position> predicate, int radius) {
         final Position p = this.assertCorrectPosition(position);
         final ArrayList<Position> positions = new ArrayList<>();
 
-        for (int dy = -1; dy <= 1; dy++) {
-            for (int dx = -1; dx <= 1; dx++) {
+        for (int dy = -radius; dy <= radius; dy++) {
+            for (int dx = -radius; dx <= radius; dx++) {
                 if (dx == 0 && dy == 0) {
                     continue;
                 }

@@ -1,5 +1,6 @@
 package Project;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public class WorldVisitor implements ActionVisitor {
@@ -36,7 +37,7 @@ public class WorldVisitor implements ActionVisitor {
                 action.getDeathCause()
             )
         );
-        o.kill();
+        world.removeOrganism(o);
     }
 
     @Override
@@ -51,5 +52,35 @@ public class WorldVisitor implements ActionVisitor {
             )
         );
         world.addOrganism(o);
+    }
+
+    @Override
+    public void visit(FreezeAction action) {
+        Position p = action.getCenter();
+        int r = action.getRadius();
+
+        LOGGER.info(
+            String.format(
+                "Freeze action was invoked at %s with radius %d",
+                p.toString(),
+                r
+            )
+        );
+        world.freezeOrganisms(p, r);
+    }
+
+    @Override
+    public void visit(UnfreezeAction action) {
+        Position p = action.getCenter();
+        int r = action.getRadius();
+
+        LOGGER.info(
+            String.format(
+                "Unfreeze action was invoked at %s with radius %d",
+                p.toString(),
+                r
+            )
+        );
+        world.unfreezeOrganisms(p, r);
     }
 }

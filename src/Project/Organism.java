@@ -26,13 +26,14 @@ public abstract class Organism {
     public List<Action> vitalize() {
         List<Action> actions = new ArrayList<>();
 
-        this.stats.increaseAge();
-        this.stats.boostPower(1);
+        if (!this.frozen()) {
+            this.stats.increaseAge();
+            this.stats.boostPower(1);
 
-        if (this.stats.getLifespan() <= 0) {
-            actions.add(new DieAction(this, DeathCause.OLD_AGE));
+            if (this.stats.getLifespan() <= 0) {
+                actions.add(new DieAction(this, DeathCause.OLD_AGE));
+            }
         }
-
         return actions;
     }
 
@@ -52,6 +53,10 @@ public abstract class Organism {
         return this.position;
     }
 
+    public boolean frozen() {
+        return isFrozen;
+    }
+
     public void setPosition(Position newPosition) {
         this.position = newPosition;
     }
@@ -68,6 +73,10 @@ public abstract class Organism {
         return this.getClass().getSimpleName();
     }
 
+    public void revive() {
+        this.alive = true;
+    }
+
     public void kill() {
         this.alive = false;
     }
@@ -76,7 +85,7 @@ public abstract class Organism {
         this.isFrozen = true;
     }
 
-    public void defreeze() {
+    public void unfreeze() {
         this.isFrozen = false;
     }
 

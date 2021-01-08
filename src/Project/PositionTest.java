@@ -20,6 +20,6 @@ public class PositionTest {
     @Test
     public void toStringTest() {
         Position position1 = new Position(4, 5);
-        assertEquals("4, 5", position1.toString());
+        assertEquals("(4, 5)", position1.toString());
     }
 }

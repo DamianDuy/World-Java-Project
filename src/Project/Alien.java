@@ -7,7 +7,8 @@ import java.util.Random;
 
 public class Alien extends Organism {
     Alien(World world, Position position) {
-        super(world, position, new OrganismStats(0, 0, 0, 1, 'A'));
+        super(world, position, new OrganismStats(0, 0,
+                500, 1, 'A'));
     }
     
     @Override
@@ -19,14 +20,19 @@ public class Alien extends Organism {
     public List<Action> move() {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
-        List<Position> positions = this.world.getFreeNeighborPositions(this);
+        if (isAlive()) {
+            List<Position> positions = this.world.getFreeNeighborPositions(this);
+            actions.add(new UnfreezeAction(this.position, 2));
 
-        if (!positions.isEmpty()) {
-            Position position = positions.get(rand.nextInt(positions.size()));
-            MoveAction moveAction = new MoveAction(this, position);
-            actions.add(moveAction);
+            if (!positions.isEmpty()) {
+                Position newPosition = positions.get(rand.nextInt(positions.size()));
+                MoveAction moveAction = new MoveAction(this, newPosition);
+                actions.add(moveAction);
+                actions.add(new FreezeAction(newPosition, 2));
+            } else {
+                actions.add(new FreezeAction(this.position, 2));
+            }
         }
-
         return actions;
     }
 
@@ -36,7 +42,7 @@ public class Alien extends Organism {
     }
 
     @Override
-    public List<Action> vitalize(){
+    public List<Action> vitalize() {
         return Collections.emptyList();
     }
 }

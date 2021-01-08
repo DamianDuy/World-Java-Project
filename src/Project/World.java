@@ -13,6 +13,7 @@ public class World {
     private final Set<Organism> organisms = new TreeSet<>(new OrganismComparator());
     private final List<Organism> newOrganisms;
     private final WorldVisitor visitor = new WorldVisitor(this);
+    private final RandomEventManager randomEventManager = new RandomEventManager(this);
 
     World(int width, int height) {
         this.width = width;
@@ -67,6 +68,8 @@ public class World {
         );
         LOGGER.info("Organism corpses are being purged");
         this.purgeDead();
+        LOGGER.info("Random events are happening now");
+        this.makeRandomEvents();
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
         LOGGER.info(String.format("Turn %d ends", this.turnCounter));
@@ -77,6 +80,11 @@ public class World {
     public void addOrganism(Organism organism) {
         this.board.addOrganism(organism);
         this.newOrganisms.add(organism);
+    }
+
+    public void removeOrganism(Organism organism) {
+        organism.kill();
+        //this.board.removeOrganism(organism);
     }
 
     public void moveOrganism(Organism organism, Position destination) {
@@ -106,6 +114,28 @@ public class World {
         final Organism o = Objects.requireNonNull(organism);
 
         return this.board.getNeighborFreePositions(o.getPosition());
+    }
+
+    public Position getFreeRandomPosition() {
+        Random rand = new Random();
+        List<Position> positions = this.board.getAllFreePositions();
+
+        if (!positions.isEmpty()) {
+            Position position = positions.get(rand.nextInt(positions.size()));
+            return position;
+        }
+
+        return null;
+    }
+
+    public void freezeOrganisms(Position center, int radius) {
+        this.board.getNeighborOrganisms(center, radius)
+            .forEach(o -> o.freeze());
+    }
+
+    public void unfreezeOrganisms(Position center, int radius) {
+        this.board.getNeighborOrganisms (center, radius)
+            .forEach(o -> o.unfreeze());
     }
 
     @Override
@@ -157,6 +187,12 @@ public class World {
                 i.remove();
             }
         }
+    }
+
+    private void makeRandomEvents() {
+        final List<Action> actions = this.randomEventManager.createEvents();
+
+        this.dispatchActions(actions);
     }
 
     private void dispatchActions(List<Action> actions) {
