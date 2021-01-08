@@ -2,13 +2,14 @@ package Project;
 
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
 public class RandomEventManager {
     private static final List<Integer> ALIEN_CHANCES = Arrays.asList(15, 30, 45, 60, 80, 100);
     private int alienChanceIndex = 0;
-    private final Organism alien;
+    private final Alien alien;
     private final World world;
 
     RandomEventManager(World world) {
@@ -20,16 +21,14 @@ public class RandomEventManager {
 
     public List<Action> createEvents() {
         final List<Action> actions = new ArrayList<>();
-        final Action alienAction = this.createAlienEvent();
+        final List<Action> alienActions = this.createAlienEvents();
 
-        if (alienAction != null) {
-            actions.add(alienAction);
-        }
+        actions.addAll(alienActions);
 
         return actions;
     }
 
-    private Action createAlienEvent() {
+    private List<Action> createAlienEvents() {
         final Position alienPosition = this.world.getFreeRandomPosition();
 
         if (alienPosition == null) {
@@ -47,10 +46,14 @@ public class RandomEventManager {
             if (this.alien.isDead()) {
                 this.alien.setPosition(alienPosition);
                 this.alien.revive();
-                return new DeliverAction(this.alien);
+
+                return Arrays.asList(new DeliverAction(this.alien));
             }
 
-            return new DieAction(this.alien, DeathCause.DISAPPEARANCE);
+            return Arrays.asList(
+                new DieAction(this.alien, DeathCause.DISAPPEARANCE),
+                new UnfreezeAction(this.alien.getPosition(), this.alien.getFreezingRadius())
+            );
         }
 
         // An event did not occur. Increase the chances of its occurrence for the
@@ -66,6 +69,6 @@ public class RandomEventManager {
             ALIEN_CHANCES.size() - 1
         );
 
-        return null;
+        return Collections.emptyList();
     }
 }

@@ -17,21 +17,21 @@ public class Main {
     public static void main(String args[]) {
         configureLogger();
 
-        final int turns = 250;
-        final World world = new World(24, 8);
+        final int turns = 50;
+        final World world = new World(14, 6);
         final List<Organism> initialOrganisms = Arrays.asList(
             new Sheep(world, new Position(0, 0)),
-            new Sheep(world, new Position(6, 7)),
-            new Sheep(world, new Position(14, 2)),
+            new Sheep(world, new Position(6, 4)),
+            new Sheep(world, new Position(8, 2)),
             new Wolf(world, new Position(4, 5)),
-            new Wolf(world, new Position(22, 1)),
+            new Wolf(world, new Position(9, 1)),
             new Grass(world, new Position(5, 5)),
-            new Grass(world, new Position(18, 7)),
-            new Grass(world, new Position(23, 5)),
+            new Grass(world, new Position(12, 4)),
+            new Grass(world, new Position(11, 5)),
             new Dandelion(world, new Position(12, 2)),
-            new Dandelion(world, new Position(1, 7)),
+            new Dandelion(world, new Position(1, 5)),
             new Toadstool(world, new Position(10, 1)),
-            new Toadstool(world, new Position(17, 7))
+            new Toadstool(world, new Position(13, 5))
         );
 
         try {

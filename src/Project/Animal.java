@@ -13,16 +13,13 @@ public abstract class Animal extends Organism {
     public List<Action> move() {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
+        List<Position> positions = this.world.getPossibleMovePositions(this);
 
-        if (isAlive() && !frozen()) {
-            List<Position> positions = this.world.getPossibleMovePositions(this);
+        if (!positions.isEmpty()) {
+            Position position = positions.get(rand.nextInt(positions.size()));
+            MoveAction moveAction = new MoveAction(this, position);
 
-            if (!positions.isEmpty()) {
-                Position position = positions.get(rand.nextInt(positions.size()));
-                MoveAction moveAction = new MoveAction(this, position);
-
-                actions.add(moveAction);
-            }
+            actions.add(moveAction);
         }
 
         return actions;
@@ -33,7 +30,7 @@ public abstract class Animal extends Organism {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
 
-        if (isAlive() && canReproduce() && !frozen()) {
+        if (canReproduce()) {
             List<Position> positions = this.world.getFreeNeighborPositions(this);
 
             if (!positions.isEmpty()) {

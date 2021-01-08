@@ -6,11 +6,17 @@ import java.util.List;
 import java.util.Random;
 
 public class Alien extends Organism {
+    private final int freezingRadius = 2;
+
     Alien(World world, Position position) {
         super(world, position, new OrganismStats(0, 0,
                 500, 1, 'A'));
     }
     
+    public int getFreezingRadius() {
+        return this.freezingRadius;
+    }
+
     @Override
     public Organism createChild(Position newPosition) {
         return new Alien(this.world, newPosition);
@@ -20,19 +26,19 @@ public class Alien extends Organism {
     public List<Action> move() {
         Random rand = new Random();
         List<Action> actions = new ArrayList<>();
-        if (isAlive()) {
-            List<Position> positions = this.world.getFreeNeighborPositions(this);
-            actions.add(new UnfreezeAction(this.position, 2));
+        List<Position> positions = this.world.getFreeNeighborPositions(this);
 
-            if (!positions.isEmpty()) {
-                Position newPosition = positions.get(rand.nextInt(positions.size()));
-                MoveAction moveAction = new MoveAction(this, newPosition);
-                actions.add(moveAction);
-                actions.add(new FreezeAction(newPosition, 2));
-            } else {
-                actions.add(new FreezeAction(this.position, 2));
-            }
+        actions.add(new UnfreezeAction(this.position, this.freezingRadius));
+
+        if (!positions.isEmpty()) {
+            Position newPosition = positions.get(rand.nextInt(positions.size()));
+            MoveAction moveAction = new MoveAction(this, newPosition);
+            actions.add(moveAction);
+            actions.add(new FreezeAction(newPosition, this.freezingRadius));
+        } else {
+            actions.add(new FreezeAction(this.position, this.freezingRadius));
         }
+
         return actions;
     }
 

@@ -1,6 +1,7 @@
 package Project;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.logging.Logger;
 
 public class World {
@@ -80,11 +81,13 @@ public class World {
     public void addOrganism(Organism organism) {
         this.board.addOrganism(organism);
         this.newOrganisms.add(organism);
+        LOGGER.info(String.format("%s was added", organism.toString()));
     }
 
     public void removeOrganism(Organism organism) {
+        this.board.removeOrganism(organism);
         organism.kill();
-        //this.board.removeOrganism(organism);
+        LOGGER.info(String.format("%s was removed", organism.toString()));
     }
 
     public void moveOrganism(Organism organism, Position destination) {
@@ -93,14 +96,44 @@ public class World {
 
         if (defender == null || defender.isDead()) {
             this.move(attacker, destination);
+            LOGGER.info(
+                String.format(
+                    "Organism %s moved to an empty position %s",
+                    attacker.name(),
+                    destination.toString()
+                )
+            );
         } else if (!organism.getClass().equals(defender.getClass())) {
+            LOGGER.info(
+                String.format(
+                    "Organism %s attacks organism %s at %s",
+                    attacker.name(),
+                    defender.name(),
+                    destination.toString()
+                )
+            );
             final List<Action> actions = defender.defend(attacker);
 
             this.dispatchActions(actions);
 
             if (attacker.isAlive()) {
                 this.move(attacker, destination);
+                LOGGER.info(
+                    String.format(
+                        "Organism %s moved to a position %s after winning the battle",
+                        attacker.name(),
+                        destination.toString()
+                    )
+                );
             }
+        } else {
+            LOGGER.info(
+                String.format(
+                    "Organism %s did not move to %s because there was an organism of the same species",
+                    attacker.name(),
+                    destination.toString()
+                )
+            );
         }
     }
 
@@ -130,12 +163,18 @@ public class World {
 
     public void freezeOrganisms(Position center, int radius) {
         this.board.getNeighborOrganisms(center, radius)
-            .forEach(o -> o.freeze());
+            .forEach(o -> {
+                o.freeze();
+                LOGGER.info(String.format("%s was frozen", o.toString()));
+            });
     }
 
     public void unfreezeOrganisms(Position center, int radius) {
         this.board.getNeighborOrganisms (center, radius)
-            .forEach(o -> o.unfreeze());
+            .forEach(o -> {
+                o.unfreeze();
+                LOGGER.info(String.format("%s was unfrozen", o.toString()));
+            });
     }
 
     @Override
@@ -156,27 +195,15 @@ public class World {
     }
 
     private void makeMoves() {
-        for (Organism o : this.organisms) {
-            final List<Action> actions = o.move();
-
-            this.dispatchActions(actions);
-        }
+        this.forEachAliveOrganism(o -> o.move());
     }
 
     private void vitalizeOrganisms() {
-        for (Organism o : this.organisms) {
-            final List<Action> actions = o.vitalize();
-
-            this.dispatchActions(actions);
-        }
+        this.forEachAliveOrganism(o -> o.vitalize());
     }
 
     private void makeActions() {
-        for (Organism o : this.organisms) {
-            final List<Action> actions = o.action();
-
-            this.dispatchActions(actions);
-        }
+        this.forEachAliveOrganism(o -> o.action());
     }
 
     private void purgeDead() {
@@ -195,9 +222,18 @@ public class World {
         this.dispatchActions(actions);
     }
 
+    private void forEachAliveOrganism(Function<Organism, List<Action>> actionMaker) {
+        this.organisms
+            .stream()
+            .filter(o -> o.isAlive() && !o.isFrozen())
+            .forEach(o -> {
+                final List<Action> actions = actionMaker.apply(o);
+
+                this.dispatchActions(actions);
+            });
+    }
+
     private void dispatchActions(List<Action> actions) {
-        for (Action a : actions) {
-            a.accept(this.visitor);
-        }
+        actions.forEach(action -> action.accept(this.visitor));
     }
 }

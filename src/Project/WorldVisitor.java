@@ -1,6 +1,5 @@
 package Project;
 
-import java.util.List;
 import java.util.logging.Logger;
 
 public class WorldVisitor implements ActionVisitor {
@@ -17,7 +16,7 @@ public class WorldVisitor implements ActionVisitor {
 
         LOGGER.info(
             String.format(
-                "Organism %s moves from %s to %s",
+                "Organism %s is trying to move from %s to %s",
                 o.name(),
                 o.getPosition().toString(),
                 action.getDestination().toString()
@@ -32,8 +31,9 @@ public class WorldVisitor implements ActionVisitor {
 
         LOGGER.info(
             String.format(
-                "Organism %s dies due to a cause '%s'",
+                "Organism %s at %s dies due to a cause '%s'",
                 o.name(),
+                o.getPosition().toString(),
                 action.getDeathCause()
             )
         );
