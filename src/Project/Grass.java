@@ -3,7 +3,7 @@ package Project;
 public class Grass extends Plant {
     Grass(World world, Position position) {
         super(world, position, new OrganismStats(0, 3,
-                0, 6, 'G'));
+                0, 8, 'G'));
     }
 
     @Override

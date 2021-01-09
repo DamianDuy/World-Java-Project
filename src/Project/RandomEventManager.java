@@ -23,7 +23,10 @@ public class RandomEventManager {
         final List<Action> actions = new ArrayList<>();
         final List<Action> alienActions = this.createAlienEvents();
 
-        actions.addAll(alienActions);
+        if (alienActions != null) {
+            // Has to check if the alienAction is null to avoid NullPointerException when the board is full
+            actions.addAll(alienActions);
+        }
 
         return actions;
     }

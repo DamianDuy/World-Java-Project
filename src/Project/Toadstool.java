@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Toadstool extends Plant {
     Toadstool(World world, Position position) {
-        super(world, position, new OrganismStats(0, 4,
+        super(world, position, new OrganismStats(0, 5,
                 0, 12, 'T'));
     }
 
