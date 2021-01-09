@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class WorldTest {
     @Test
     public void moveToEmptyPositionTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Sheep sheep = new Sheep(world, new Position(1,0));
         world.addOrganism(sheep);
         world.moveOrganism(sheep, new Position(0,0));
@@ -15,7 +15,7 @@ public class WorldTest {
     }
     @Test
     public void moveToPositionWithWeakerTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Position position = new Position(1, 0);
         Sheep sheep = new Sheep(world, position);
         Wolf wolf = new Wolf(world, new Position(0,0));
@@ -26,7 +26,7 @@ public class WorldTest {
     }
     @Test
     public void moveToOccupiedByTheSameTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Wolf wolf1 = new Wolf(world, new Position(1, 0));
         Wolf wolf2 = new Wolf(world, new Position(0, 0));
         world.addOrganism(wolf1);
@@ -36,7 +36,7 @@ public class WorldTest {
     }
     @Test
     public void devourOrganismTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Position position1 = new Position(1, 0);
         Position position2 = new Position(0, 0);
         Sheep sheep = new Sheep(world, position1);
@@ -48,7 +48,7 @@ public class WorldTest {
     }
     @Test
     public void deathFromOldAgeTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5,'c');
         Position position = new Position(1, 0);
         Grass grass = new Grass(world, position);
         world.addOrganism(grass);
@@ -61,7 +61,7 @@ public class WorldTest {
     }
     @Test
     public void attackerEatToadstoolTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5,'c');
         Toadstool toadstool = new Toadstool(world, new Position(1,0));
         Wolf wolf = new Wolf(world, new Position(0,0));
         world.addOrganism(toadstool);
@@ -71,7 +71,7 @@ public class WorldTest {
     }
     @Test
     public void newOrganismBirthTest() {
-        World world = new World(1,2);
+        World world = new World(1,2,'c');
         Grass grass = new Grass(world, new Position(0,0));
         world.addOrganism(grass);
         world.switchOffRandomEvents();
@@ -83,7 +83,7 @@ public class WorldTest {
     }
     @Test
     public void alienFreezeTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Position position1 = new Position(1, 0);
         Position position2 = new Position(0, 0);
         Toadstool toadstool = new Toadstool(world, position1);
@@ -96,7 +96,7 @@ public class WorldTest {
     }
     @Test
     public void alienUnfreezeTest() {
-        World world = new World(5, 5);
+        World world = new World(5, 5, 'c');
         Position position1 = new Position(1, 0);
         Position position2 = new Position(0, 0);
         Toadstool toadstool = new Toadstool(world, position1);

@@ -18,7 +18,7 @@ public class Main {
         configureLogger();
 
         final int turns = 50;
-        final World world = new World(14, 6);
+        final World world = new World(14, 6, 'c');
         final List<Organism> initialOrganisms = Arrays.asList(
             new Sheep(world, new Position(0, 0)),
             new Sheep(world, new Position(6, 4)),
