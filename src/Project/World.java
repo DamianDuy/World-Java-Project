@@ -2,10 +2,8 @@ package Project;
 
 import java.util.*;
 import java.util.function.Function;
-import java.util.logging.Logger;
 
 public class World {
-    private static final Logger LOGGER = Logger.getLogger(Main.DEBUG_LOGGER);
     private boolean started = false;
     private boolean areRandomEvents = true;
     private int turnCounter = 1;
@@ -31,14 +29,6 @@ public class World {
 
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
-        LOGGER.info(
-            String.format(
-                "Starting a new %dx%d world with initial position:\n%s",
-                this.width,
-                this.height,
-                this.board.toString()
-            )
-        );
         worldWriter.print(String.format(
                 "Starting a new %dx%d world with initial position:\n%s",
                 this.width,
@@ -55,54 +45,32 @@ public class World {
             );
         }
 
-        LOGGER.info(String.format("Turn %d begins", this.turnCounter));
         worldWriter.print(String.format("Turn %d begins", this.turnCounter));
-        LOGGER.info("Organisms start their movements");
         worldWriter.print("Organisms start their movements");
         this.makeMoves();
-        LOGGER.info(
-            String.format(
-                "World after the movements:\n%s",
-                this.board.toString()
-            )
-        );
         worldWriter.print(String.format(
                 "World after the movements:\n%s",
                 this.board.toString()
         ));
-        LOGGER.info("Organisms start their actions");
         worldWriter.print("Organisms start their actions");
         this.makeActions();
-        LOGGER.info(
-            String.format("World after the actions:\n%s", this.board.toString())
-        );
         worldWriter.print(
                 String.format("World after the actions:\n%s", this.board.toString())
         );
-        LOGGER.info("Organisms start being vitalized");
         worldWriter.print("Organisms start being vitalized");
         this.vitalizeOrganisms();
-        LOGGER.info(
-            String.format(
-                "World after the vitalization:\n%s",
-                this.board.toString()
-            )
-        );
         worldWriter.print(String.format(
                 "World after the vitalization:\n%s",
                 this.board.toString()
         ));
-        LOGGER.info("Organism corpses are being purged");
         worldWriter.print("Organism corpses are being purged");
         this.purgeDead();
         if (areRandomEvents) {
-            LOGGER.info("Random events are happening now");
             worldWriter.print("Random events are happening now");
             this.makeRandomEvents();
         }
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
-        LOGGER.info(String.format("Turn %d ends", this.turnCounter));
         worldWriter.print(String.format("Turn %d ends", this.turnCounter));
 
         this.turnCounter++;
@@ -111,52 +79,27 @@ public class World {
     public void addOrganism(Organism organism) {
         this.board.addOrganism(organism);
         this.newOrganisms.add(organism);
-        LOGGER.info(
-                String.format(
-                        "Organism %s is born at %s",
-                        organism.name(),
-                        organism.getPosition().toString()
-                )
-        );
         worldWriter.print(String.format(
                 "Organism %s is born at %s",
                 organism.name(),
                 organism.getPosition().toString()
         ));
-        LOGGER.info(String.format("%s was added", organism.toString()));
         worldWriter.print(String.format("%s was added", organism.toString()));
     }
 
     public void removeOrganism(Organism organism, DeathCause deathCause) {
         this.board.removeOrganism(organism);
         organism.kill();
-        LOGGER.info(
-                String.format(
-                        "Organism %s at %s dies due to a cause '%s'",
-                        organism.name(),
-                        organism.getPosition().toString(),
-                        deathCause
-                )
-        );
         worldWriter.print(String.format(
                 "Organism %s at %s dies due to a cause '%s'",
                 organism.name(),
                 organism.getPosition().toString(),
                 deathCause
         ));
-        LOGGER.info(String.format("%s was removed", organism.toString()));
         worldWriter.print(String.format("%s was removed", organism.toString()));
     }
 
     public void moveOrganism(Organism organism, Position destination) {
-        LOGGER.info(
-                String.format(
-                        "Organism %s is trying to move from %s to %s",
-                        organism.name(),
-                        organism.getPosition().toString(),
-                        destination.toString()
-                )
-        );
         worldWriter.print(
                 String.format(
                         "Organism %s is trying to move from %s to %s",
@@ -170,13 +113,6 @@ public class World {
 
         if (defender == null || defender.isDead()) {
             this.move(attacker, destination);
-            LOGGER.info(
-                String.format(
-                    "Organism %s moved to an empty position %s",
-                    attacker.name(),
-                    destination.toString()
-                )
-            );
             worldWriter.print(
                     String.format(
                             "Organism %s moved to an empty position %s",
@@ -185,14 +121,6 @@ public class World {
                     )
             );
         } else if (!organism.getClass().equals(defender.getClass())) {
-            LOGGER.info(
-                String.format(
-                    "Organism %s attacks organism %s at %s",
-                    attacker.name(),
-                    defender.name(),
-                    destination.toString()
-                )
-            );
             worldWriter.print(
                     String.format(
                             "Organism %s attacks organism %s at %s",
@@ -207,13 +135,6 @@ public class World {
 
             if (attacker.isAlive()) {
                 this.move(attacker, destination);
-                LOGGER.info(
-                    String.format(
-                        "Organism %s moved to a position %s after winning the battle",
-                        attacker.name(),
-                        destination.toString()
-                    )
-                );
                 worldWriter.print(
                         String.format(
                                 "Organism %s moved to a position %s after winning the battle",
@@ -223,13 +144,6 @@ public class World {
                 );
             }
         } else {
-            LOGGER.info(
-                String.format(
-                    "Organism %s did not move to %s because there was an organism of the same species",
-                    attacker.name(),
-                    destination.toString()
-                )
-            );
             worldWriter.print(
                     String.format(
                             "Organism %s did not move to %s because there was an organism of the same species",
@@ -265,13 +179,6 @@ public class World {
     }
 
     public void freezeOrganisms(Position center, int radius) {
-        LOGGER.info(
-                String.format(
-                        "Freeze action was invoked at %s with radius %d",
-                        center.toString(),
-                        radius
-                )
-        );
         worldWriter.print(
                 String.format(
                         "Freeze action was invoked at %s with radius %d",
@@ -282,19 +189,11 @@ public class World {
         this.board.getNeighborOrganisms(center, radius)
             .forEach(o -> {
                 o.freeze();
-                LOGGER.info(String.format("%s was frozen", o.toString()));
                 worldWriter.print(String.format("%s was frozen", o.toString()));
             });
     }
 
     public void unfreezeOrganisms(Position center, int radius) {
-        LOGGER.info(
-                String.format(
-                        "Unfreeze action was invoked at %s with radius %d",
-                        center.toString(),
-                        radius
-                )
-        );
         worldWriter.print(
                 String.format(
                         "Unfreeze action was invoked at %s with radius %d",
@@ -305,7 +204,6 @@ public class World {
         this.board.getNeighborOrganisms (center, radius)
             .forEach(o -> {
                 o.unfreeze();
-                LOGGER.info(String.format("%s was unfrozen", o.toString()));
                 worldWriter.print(String.format("%s was unfrozen", o.toString()));
             });
     }

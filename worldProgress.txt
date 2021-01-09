@@ -1,0 +1,2554 @@
+Organism Sheep is born at (0, 0)
+Organism Sheep [position = (0, 0), lifespan = 10] was added
+Organism Sheep is born at (6, 4)
+Organism Sheep [position = (6, 4), lifespan = 10] was added
+Organism Sheep is born at (8, 2)
+Organism Sheep [position = (8, 2), lifespan = 10] was added
+Organism Wolf is born at (4, 5)
+Organism Wolf [position = (4, 5), lifespan = 20] was added
+Organism Wolf is born at (9, 1)
+Organism Wolf [position = (9, 1), lifespan = 20] was added
+Organism Grass is born at (5, 5)
+Organism Grass [position = (5, 5), lifespan = 8] was added
+Organism Grass is born at (12, 4)
+Organism Grass [position = (12, 4), lifespan = 8] was added
+Organism Grass is born at (11, 5)
+Organism Grass [position = (11, 5), lifespan = 8] was added
+Organism Dandelion is born at (12, 2)
+Organism Dandelion [position = (12, 2), lifespan = 6] was added
+Organism Dandelion is born at (1, 5)
+Organism Dandelion [position = (1, 5), lifespan = 6] was added
+Organism Toadstool is born at (10, 1)
+Organism Toadstool [position = (10, 1), lifespan = 12] was added
+Organism Toadstool is born at (13, 5)
+Organism Toadstool [position = (13, 5), lifespan = 12] was added
+Starting a new 14x6 world with initial position:
++--------------+
+|S             |
+|         WT   |
+|        S   D |
+|              |
+|      S     G |
+| D  WG     G T|
++--------------+
+
+Turn 1 begins
+Organisms start their movements
+Organism Wolf is trying to move from (4, 5) to (5, 4)
+Organism Wolf moved to an empty position (5, 4)
+Organism Wolf is trying to move from (9, 1) to (10, 1)
+Organism Wolf attacks organism Toadstool at (10, 1)
+Organism Wolf at (9, 1) dies due to a cause 'TOADSTOOL'
+Organism Wolf [position = (9, 1), lifespan = 20] was removed
+Organism Toadstool at (10, 1) dies due to a cause 'KILLED'
+Organism Toadstool [position = (10, 1), lifespan = 12] was removed
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep moved to an empty position (1, 0)
+Organism Sheep is trying to move from (6, 4) to (5, 4)
+Organism Sheep attacks organism Wolf at (5, 4)
+Organism Sheep at (6, 4) dies due to a cause 'KILLED'
+Organism Sheep [position = (6, 4), lifespan = 10] was removed
+Organism Sheep is trying to move from (8, 2) to (7, 2)
+Organism Sheep moved to an empty position (7, 2)
+World after the movements:
++--------------+
+| S            |
+|              |
+|       S    D |
+|              |
+|     W      G |
+| D   G     G T|
++--------------+
+
+Organisms start their actions
+World after the actions:
++--------------+
+| S            |
+|              |
+|       S    D |
+|              |
+|     W      G |
+| D   G     G T|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+| S            |
+|              |
+|       S    D |
+|              |
+|     W      G |
+| D   G     G T|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 1 ends
+Turn 2 begins
+Organisms start their movements
+Organism Wolf is trying to move from (5, 4) to (5, 3)
+Organism Wolf moved to an empty position (5, 3)
+Organism Sheep is trying to move from (1, 0) to (0, 0)
+Organism Sheep moved to an empty position (0, 0)
+Organism Sheep is trying to move from (7, 2) to (7, 3)
+Organism Sheep moved to an empty position (7, 3)
+World after the movements:
++--------------+
+|S             |
+|              |
+|            D |
+|     W S      |
+|            G |
+| D   G     G T|
++--------------+
+
+Organisms start their actions
+World after the actions:
++--------------+
+|S             |
+|              |
+|            D |
+|     W S      |
+|            G |
+| D   G     G T|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+|S             |
+|              |
+|            D |
+|     W S      |
+|            G |
+| D   G     G T|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 2 ends
+Turn 3 begins
+Organisms start their movements
+Organism Wolf is trying to move from (5, 3) to (6, 4)
+Organism Wolf moved to an empty position (6, 4)
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (7, 3) to (8, 4)
+Organism Sheep moved to an empty position (8, 4)
+World after the movements:
++--------------+
+|              |
+| S            |
+|            D |
+|              |
+|      W S   G |
+| D   G     G T|
++--------------+
+
+Organisms start their actions
+Organism Dandelion is born at (12, 1)
+Organism Dandelion [position = (12, 1), lifespan = 6] was added
+Organism Dandelion is born at (0, 5)
+Organism Dandelion [position = (0, 5), lifespan = 6] was added
+World after the actions:
++--------------+
+|              |
+| S          D |
+|            D |
+|              |
+|      W S   G |
+|DD   G     G T|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+|              |
+| S          D |
+|            D |
+|              |
+|      W S   G |
+|DD   G     G T|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 3 ends
+Turn 4 begins
+Organisms start their movements
+Organism Wolf is trying to move from (6, 4) to (7, 3)
+Organism Wolf moved to an empty position (7, 3)
+Organism Sheep is trying to move from (1, 1) to (0, 1)
+Organism Sheep moved to an empty position (0, 1)
+Organism Sheep is trying to move from (8, 4) to (7, 3)
+Organism Sheep attacks organism Wolf at (7, 3)
+Organism Sheep at (8, 4) dies due to a cause 'KILLED'
+Organism Sheep [position = (8, 4), lifespan = 7] was removed
+World after the movements:
++--------------+
+|              |
+|S           D |
+|            D |
+|       W      |
+|            G |
+|DD   G     G T|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (1, 0)
+Organism Sheep [position = (1, 0), lifespan = 10] was added
+Organism Grass is born at (4, 4)
+Organism Grass [position = (4, 4), lifespan = 8] was added
+Organism Grass is born at (12, 5)
+Organism Grass [position = (12, 5), lifespan = 8] was added
+Organism Grass is born at (10, 5)
+Organism Grass [position = (10, 5), lifespan = 8] was added
+Organism Dandelion is born at (13, 3)
+Organism Dandelion [position = (13, 3), lifespan = 6] was added
+Organism Dandelion is born at (2, 5)
+Organism Dandelion [position = (2, 5), lifespan = 6] was added
+World after the actions:
++--------------+
+| S            |
+|S           D |
+|            D |
+|       W     D|
+|    G       G |
+|DDD  G    GGGT|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+| S            |
+|S           D |
+|            D |
+|       W     D|
+|    G       G |
+|DDD  G    GGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien is born at (5, 0)
+Organism Alien [position = (5, 0), lifespan = 1] was added
+Turn 4 ends
+Turn 5 begins
+Organisms start their movements
+Unfreeze action was invoked at (5, 0) with radius 2
+Organism Alien is trying to move from (5, 0) to (6, 0)
+Organism Alien moved to an empty position (6, 0)
+Freeze action was invoked at (6, 0) with radius 2
+Organism Wolf is trying to move from (7, 3) to (7, 4)
+Organism Wolf moved to an empty position (7, 4)
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep moved to an empty position (1, 2)
+Organism Sheep is trying to move from (1, 0) to (0, 0)
+Organism Sheep moved to an empty position (0, 0)
+World after the movements:
++--------------+
+|S     A       |
+|            D |
+| S          D |
+|             D|
+|    G  W    G |
+|DDD  G    GGGT|
++--------------+
+
+Organisms start their actions
+Organism Dandelion is born at (11, 1)
+Organism Dandelion [position = (11, 1), lifespan = 6] was added
+Organism Dandelion is born at (0, 4)
+Organism Dandelion [position = (0, 4), lifespan = 6] was added
+World after the actions:
++--------------+
+|S     A       |
+|           DD |
+| S          D |
+|             D|
+|D   G  W    G |
+|DDD  G    GGGT|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+|S     A       |
+|           DD |
+| S          D |
+|             D|
+|D   G  W    G |
+|DDD  G    GGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 5 ends
+Turn 6 begins
+Organisms start their movements
+Unfreeze action was invoked at (6, 0) with radius 2
+Organism Alien is trying to move from (6, 0) to (7, 0)
+Organism Alien moved to an empty position (7, 0)
+Freeze action was invoked at (7, 0) with radius 2
+Organism Wolf is trying to move from (7, 4) to (8, 5)
+Organism Wolf moved to an empty position (8, 5)
+Organism Sheep is trying to move from (1, 2) to (0, 2)
+Organism Sheep moved to an empty position (0, 2)
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+World after the movements:
++--------------+
+|       A      |
+| S         DD |
+|S           D |
+|             D|
+|D   G       G |
+|DDD  G  W GGGT|
++--------------+
+
+Organisms start their actions
+Organism Grass is born at (5, 4)
+Organism Grass [position = (5, 4), lifespan = 8] was added
+Organism Grass is born at (12, 3)
+Organism Grass [position = (12, 3), lifespan = 8] was added
+Organism Grass is born at (11, 4)
+Organism Grass [position = (11, 4), lifespan = 8] was added
+Organism Dandelion is born at (11, 3)
+Organism Dandelion [position = (11, 3), lifespan = 6] was added
+Organism Dandelion is born at (1, 4)
+Organism Dandelion [position = (1, 4), lifespan = 6] was added
+Organism Toadstool is born at (13, 4)
+Organism Toadstool [position = (13, 4), lifespan = 12] was added
+Organism Dandelion is born at (13, 2)
+Organism Dandelion [position = (13, 2), lifespan = 6] was added
+World after the actions:
++--------------+
+|       A      |
+| S         DD |
+|S           DD|
+|           DGD|
+|DD  GG     GGT|
+|DDD  G  W GGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Dandelion at (12, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 2), lifespan = 0] was removed
+Organism Dandelion at (1, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (1, 5), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|       A      |
+| S         DD |
+|S            D|
+|           DGD|
+|DD  GG     GGT|
+|D D  G  W GGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 6 ends
+Turn 7 begins
+Organisms start their movements
+Unfreeze action was invoked at (7, 0) with radius 2
+Organism Alien is trying to move from (7, 0) to (8, 0)
+Organism Alien moved to an empty position (8, 0)
+Freeze action was invoked at (8, 0) with radius 2
+Organism Wolf is trying to move from (8, 5) to (9, 5)
+Organism Wolf moved to an empty position (9, 5)
+Organism Sheep is trying to move from (0, 2) to (1, 3)
+Organism Sheep moved to an empty position (1, 3)
+Organism Sheep is trying to move from (1, 1) to (0, 1)
+Organism Sheep moved to an empty position (0, 1)
+World after the movements:
++--------------+
+|        A     |
+|S          DD |
+|             D|
+| S         DGD|
+|DD  GG     GGT|
+|D D  G   WGGGT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (1, 2)
+Organism Sheep [position = (1, 2), lifespan = 10] was added
+Organism Dandelion is born at (13, 0)
+Organism Dandelion [position = (13, 0), lifespan = 6] was added
+Organism Dandelion is born at (1, 5)
+Organism Dandelion [position = (1, 5), lifespan = 6] was added
+Organism Dandelion is born at (12, 2)
+Organism Dandelion [position = (12, 2), lifespan = 6] was added
+Organism Dandelion is born at (3, 4)
+Organism Dandelion [position = (3, 4), lifespan = 6] was added
+World after the actions:
++--------------+
+|        A    D|
+|S          DD |
+| S          DD|
+| S         DGD|
+|DD DGG     GGT|
+|DDD  G   WGGGT|
++--------------+
+
+Organisms start being vitalized
+World after the vitalization:
++--------------+
+|        A    D|
+|S          DD |
+| S          DD|
+| S         DGD|
+|DD DGG     GGT|
+|DDD  G   WGGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 7 ends
+Turn 8 begins
+Organisms start their movements
+Unfreeze action was invoked at (8, 0) with radius 2
+Organism Alien is trying to move from (8, 0) to (9, 0)
+Organism Alien moved to an empty position (9, 0)
+Freeze action was invoked at (9, 0) with radius 2
+Organism Dandelion [position = (11, 1), lifespan = 4] was frozen
+Organism Wolf is trying to move from (9, 5) to (9, 4)
+Organism Wolf moved to an empty position (9, 4)
+Organism Sheep is trying to move from (1, 3) to (2, 2)
+Organism Sheep moved to an empty position (2, 2)
+Organism Sheep is trying to move from (0, 1) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (1, 2) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+World after the movements:
++--------------+
+|         A   D|
+| S         DD |
+| SS         DD|
+|           DGD|
+|DD DGG   W GGT|
+|DDD  G    GGGT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (0, 0)
+Organism Sheep [position = (0, 0), lifespan = 10] was added
+Organism Grass is born at (6, 4)
+Organism Grass [position = (6, 4), lifespan = 8] was added
+Organism Grass is born at (10, 4)
+Organism Grass [position = (10, 4), lifespan = 8] was added
+Organism Dandelion is born at (13, 1)
+Organism Dandelion [position = (13, 1), lifespan = 6] was added
+Organism Grass is born at (3, 3)
+Organism Grass [position = (3, 3), lifespan = 8] was added
+Organism Grass is born at (9, 5)
+Organism Grass [position = (9, 5), lifespan = 8] was added
+Organism Dandelion is born at (3, 5)
+Organism Dandelion [position = (3, 5), lifespan = 6] was added
+Organism Dandelion is born at (0, 3)
+Organism Dandelion [position = (0, 3), lifespan = 6] was added
+World after the actions:
++--------------+
+|S        A   D|
+| S         DDD|
+| SS         DD|
+|D  G       DGD|
+|DD DGGG  WGGGT|
+|DDDD G   GGGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Grass at (5, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (5, 5), lifespan = 0] was removed
+Organism Grass at (12, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (12, 4), lifespan = 0] was removed
+Organism Grass at (11, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (11, 5), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|S        A   D|
+| S         DDD|
+| SS         DD|
+|D  G       DGD|
+|DD DGGG  WGG T|
+|DDDD     GG GT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien at (9, 0) dies due to a cause 'DISAPPEARANCE'
+Organism Alien [position = (9, 0), lifespan = 1] was removed
+Unfreeze action was invoked at (9, 0) with radius 2
+Organism Dandelion [position = (11, 1), lifespan = 4] was unfrozen
+Turn 8 ends
+Turn 9 begins
+Organisms start their movements
+Organism Wolf is trying to move from (9, 4) to (8, 4)
+Organism Wolf moved to an empty position (8, 4)
+Organism Sheep is trying to move from (2, 2) to (2, 3)
+Organism Sheep moved to an empty position (2, 3)
+Organism Sheep is trying to move from (1, 1) to (1, 0)
+Organism Sheep moved to an empty position (1, 0)
+Organism Sheep is trying to move from (1, 2) to (0, 1)
+Organism Sheep moved to an empty position (0, 1)
+Organism Sheep is trying to move from (0, 0) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+World after the movements:
++--------------+
+|SS           D|
+|S          DDD|
+|            DD|
+|D SG       DGD|
+|DD DGGG W GG T|
+|DDDD     GG GT|
++--------------+
+
+Organisms start their actions
+Organism Wolf is born at (9, 4)
+Organism Wolf [position = (9, 4), lifespan = 20] was added
+Organism Toadstool is born at (12, 4)
+Organism Toadstool [position = (12, 4), lifespan = 12] was added
+Organism Dandelion is born at (11, 2)
+Organism Dandelion [position = (11, 2), lifespan = 6] was added
+Organism Grass is born at (11, 5)
+Organism Grass [position = (11, 5), lifespan = 8] was added
+Organism Dandelion is born at (2, 4)
+Organism Dandelion [position = (2, 4), lifespan = 6] was added
+Organism Dandelion is born at (12, 0)
+Organism Dandelion [position = (12, 0), lifespan = 6] was added
+Organism Dandelion is born at (1, 3)
+Organism Dandelion [position = (1, 3), lifespan = 6] was added
+Organism Dandelion is born at (10, 2)
+Organism Dandelion [position = (10, 2), lifespan = 6] was added
+World after the actions:
++--------------+
+|SS          DD|
+|S          DDD|
+|          DDDD|
+|DDSG       DGD|
+|DDDDGGG WWGGTT|
+|DDDD     GGGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Dandelion at (12, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 1), lifespan = 0] was removed
+Organism Dandelion at (0, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (0, 5), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SS          DD|
+|S          D D|
+|          DDDD|
+|DDSG       DGD|
+|DDDDGGG WWGGTT|
+| DDD     GGGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 9 ends
+Turn 10 begins
+Organisms start their movements
+Organism Wolf is trying to move from (8, 4) to (9, 3)
+Organism Wolf moved to an empty position (9, 3)
+Organism Wolf is trying to move from (9, 4) to (10, 3)
+Organism Wolf moved to an empty position (10, 3)
+Organism Sheep is trying to move from (2, 3) to (1, 2)
+Organism Sheep moved to an empty position (1, 2)
+Organism Sheep is trying to move from (1, 0) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (0, 1) to (0, 2)
+Organism Sheep moved to an empty position (0, 2)
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+World after the movements:
++--------------+
+|S           DD|
+| S         D D|
+|SS        DDDD|
+|DD G     WWDGD|
+|DDDDGGG   GGTT|
+| DDD     GGGGT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (2, 1)
+Organism Sheep [position = (2, 1), lifespan = 10] was added
+Organism Grass is born at (5, 5)
+Organism Grass [position = (5, 5), lifespan = 8] was added
+Organism Grass is born at (9, 4)
+Organism Grass [position = (9, 4), lifespan = 8] was added
+Organism Dandelion is born at (10, 1)
+Organism Dandelion [position = (10, 1), lifespan = 6] was added
+Organism Dandelion is born at (0, 5)
+Organism Dandelion [position = (0, 5), lifespan = 6] was added
+Organism Grass is born at (6, 3)
+Organism Grass [position = (6, 3), lifespan = 8] was added
+Organism Dandelion is born at (2, 3)
+Organism Dandelion [position = (2, 3), lifespan = 6] was added
+Organism Dandelion is born at (12, 1)
+Organism Dandelion [position = (12, 1), lifespan = 6] was added
+Organism Dandelion is born at (4, 5)
+Organism Dandelion [position = (4, 5), lifespan = 6] was added
+World after the actions:
++--------------+
+|S           DD|
+| SS       DDDD|
+|SS        DDDD|
+|DDDG  G  WWDGD|
+|DDDDGGG  GGGTT|
+|DDDDDG   GGGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (1, 2) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (1, 2), lifespan = 0] was removed
+Organism Dandelion at (13, 3) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 3), lifespan = 0] was removed
+Organism Dandelion at (2, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (2, 5), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|S           DD|
+| SS       DDDD|
+|S         DDDD|
+|DDDG  G  WWDG |
+|DDDDGGG  GGGTT|
+|DD DDG   GGGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 10 ends
+Turn 11 begins
+Organisms start their movements
+Organism Wolf is trying to move from (9, 3) to (9, 4)
+Organism Wolf attacks organism Grass at (9, 4)
+Organism Grass at (9, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (9, 4), lifespan = 8] was removed
+Organism Wolf moved to a position (9, 4) after winning the battle
+Organism Wolf is trying to move from (10, 3) to (9, 4)
+Organism Wolf did not move to (9, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (0, 1)
+Organism Sheep moved to an empty position (0, 1)
+Organism Sheep is trying to move from (0, 2) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep moved to an empty position (1, 0)
+Organism Sheep is trying to move from (2, 1) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+World after the movements:
++--------------+
+| S          DD|
+|SS        DDDD|
+|S         DDDD|
+|DDDG  G   WDG |
+|DDDDGGG  WGGTT|
+|DD DDG   GGGGT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (0, 0)
+Organism Sheep [position = (0, 0), lifespan = 10] was added
+Organism Sheep is born at (1, 2)
+Organism Sheep [position = (1, 2), lifespan = 10] was added
+Organism Dandelion is born at (10, 0)
+Organism Dandelion [position = (10, 0), lifespan = 6] was added
+Organism Grass is born at (13, 3)
+Organism Grass [position = (13, 3), lifespan = 8] was added
+Organism Dandelion is born at (2, 5)
+Organism Dandelion [position = (2, 5), lifespan = 6] was added
+Organism Dandelion is born at (4, 3)
+Organism Dandelion [position = (4, 3), lifespan = 6] was added
+World after the actions:
++--------------+
+|SS        D DD|
+|SS        DDDD|
+|SS        DDDD|
+|DDDGD G   WDGG|
+|DDDDGGG  WGGTT|
+|DDDDDG   GGGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Dandelion at (0, 4) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (0, 4), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SS        D DD|
+|SS        DDDD|
+|SS        DDDD|
+|DDDGD G   WDGG|
+| DDDGGG  WGGTT|
+|DDDDDG   GGGGT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 11 ends
+Turn 12 begins
+Organisms start their movements
+Organism Wolf is trying to move from (9, 4) to (8, 5)
+Organism Wolf moved to an empty position (8, 5)
+Organism Wolf is trying to move from (10, 3) to (11, 4)
+Organism Wolf attacks organism Grass at (11, 4)
+Organism Grass at (11, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (11, 4), lifespan = 3] was removed
+Organism Wolf moved to a position (11, 4) after winning the battle
+Organism Sheep is trying to move from (0, 1) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 1)
+Organism Sheep moved to an empty position (2, 1)
+Organism Sheep is trying to move from (1, 1) to (2, 0)
+Organism Sheep moved to an empty position (2, 0)
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep moved to an empty position (1, 0)
+Organism Sheep is trying to move from (1, 2) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+World after the movements:
++--------------+
+| SS       D DD|
+|S S       DDDD|
+|SS        DDDD|
+|DDDGD G    DGG|
+| DDDGGG   GWTT|
+|DDDDDG  WGGGGT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (3, 1)
+Organism Sheep [position = (3, 1), lifespan = 10] was added
+Organism Grass is born at (5, 3)
+Organism Grass [position = (5, 3), lifespan = 8] was added
+Organism Grass is born at (9, 4)
+Organism Grass [position = (9, 4), lifespan = 8] was added
+Organism Dandelion is born at (11, 0)
+Organism Dandelion [position = (11, 0), lifespan = 6] was added
+Organism Grass is born at (6, 5)
+Organism Grass [position = (6, 5), lifespan = 8] was added
+Organism Dandelion is born at (10, 3)
+Organism Dandelion [position = (10, 3), lifespan = 6] was added
+Organism Dandelion is born at (0, 4)
+Organism Dandelion [position = (0, 4), lifespan = 6] was added
+Organism Grass is born at (7, 4)
+Organism Grass [position = (7, 4), lifespan = 8] was added
+Organism Grass is born at (9, 3)
+Organism Grass [position = (9, 3), lifespan = 8] was added
+Organism Grass is born at (3, 2)
+Organism Grass [position = (3, 2), lifespan = 8] was added
+Organism Grass is born at (8, 4)
+Organism Grass [position = (8, 4), lifespan = 8] was added
+Organism Dandelion is born at (2, 2)
+Organism Dandelion [position = (2, 2), lifespan = 6] was added
+Organism Dandelion is born at (9, 1)
+Organism Dandelion [position = (9, 1), lifespan = 6] was added
+World after the actions:
++--------------+
+| SS       DDDD|
+|S SS     DDDDD|
+|SSDG      DDDD|
+|DDDGDGG  GDDGG|
+|DDDDGGGGGGGWTT|
+|DDDDDGG WGGGGT|
++--------------+
+
+Organisms start being vitalized
+Organism Toadstool at (13, 5) dies due to a cause 'OLD_AGE'
+Organism Toadstool [position = (13, 5), lifespan = 0] was removed
+Organism Grass at (4, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (4, 4), lifespan = 0] was removed
+Organism Grass at (12, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (12, 5), lifespan = 0] was removed
+Organism Grass at (10, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (10, 5), lifespan = 0] was removed
+Organism Dandelion at (11, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 1), lifespan = 0] was removed
+Organism Dandelion at (11, 3) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 3), lifespan = 0] was removed
+Organism Dandelion at (1, 4) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (1, 4), lifespan = 0] was removed
+Organism Dandelion at (13, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 2), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+| SS       DDDD|
+|S SS     DD DD|
+|SSDG      DDD |
+|DDDGDGG  GD GG|
+|D DD GGGGGGWTT|
+|DDDDDGG WG G  |
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 12 ends
+Turn 13 begins
+Organisms start their movements
+Organism Wolf is trying to move from (8, 5) to (7, 5)
+Organism Wolf moved to an empty position (7, 5)
+Organism Wolf is trying to move from (11, 4) to (12, 3)
+Organism Wolf attacks organism Grass at (12, 3)
+Organism Grass at (12, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (12, 3), lifespan = 2] was removed
+Organism Wolf moved to a position (12, 3) after winning the battle
+Organism Sheep is trying to move from (0, 1) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (2, 1) to (3, 0)
+Organism Sheep moved to an empty position (3, 0)
+Organism Sheep is trying to move from (2, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (0, 2)
+Organism Sheep moved to an empty position (0, 2)
+Organism Sheep is trying to move from (3, 1) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+World after the movements:
++--------------+
+| SSS      DDDD|
+|SS S     DD DD|
+|S DG      DDD |
+|DDDGDGG  GD WG|
+|D DD GGGGGG TT|
+|DDDDDGGW G G  |
++--------------+
+
+Organisms start their actions
+Organism Toadstool is born at (12, 5)
+Organism Toadstool [position = (12, 5), lifespan = 12] was added
+Organism Dandelion is born at (1, 4)
+Organism Dandelion [position = (1, 4), lifespan = 6] was added
+Organism Dandelion is born at (11, 3)
+Organism Dandelion [position = (11, 3), lifespan = 6] was added
+Organism Dandelion is born at (4, 4)
+Organism Dandelion [position = (4, 4), lifespan = 6] was added
+Organism Dandelion is born at (13, 2)
+Organism Dandelion [position = (13, 2), lifespan = 6] was added
+Organism Dandelion is born at (1, 2)
+Organism Dandelion [position = (1, 2), lifespan = 6] was added
+Organism Dandelion is born at (11, 1)
+Organism Dandelion [position = (11, 1), lifespan = 6] was added
+Organism Grass is born at (10, 5)
+Organism Grass [position = (10, 5), lifespan = 8] was added
+Organism Dandelion is born at (9, 2)
+Organism Dandelion [position = (9, 2), lifespan = 6] was added
+Organism Dandelion is born at (9, 0)
+Organism Dandelion [position = (9, 0), lifespan = 6] was added
+World after the actions:
++--------------+
+| SSS     DDDDD|
+|SS S     DDDDD|
+|SDDG     DDDDD|
+|DDDGDGG  GDDWG|
+|DDDDDGGGGGG TT|
+|DDDDDGGW GGGT |
++--------------+
+
+Organisms start being vitalized
+Organism Dandelion at (13, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 0), lifespan = 0] was removed
+Organism Dandelion at (1, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (1, 5), lifespan = 0] was removed
+Organism Dandelion at (12, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 2), lifespan = 0] was removed
+Organism Dandelion at (3, 4) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (3, 4), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+| SSS     DDDD |
+|SS S     DDDDD|
+|SDDG     DDD D|
+|DDDGDGG  GDDWG|
+|DDD DGGGGGG TT|
+|D DDDGGW GGGT |
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien is born at (3, 4)
+Organism Alien [position = (3, 4), lifespan = 1] was added
+Turn 13 ends
+Turn 14 begins
+Organisms start their movements
+Unfreeze action was invoked at (3, 4) with radius 2
+Organism Dandelion [position = (1, 2), lifespan = 6] was unfrozen
+Organism Dandelion [position = (2, 2), lifespan = 5] was unfrozen
+Organism Grass [position = (3, 2), lifespan = 7] was unfrozen
+Organism Dandelion [position = (1, 3), lifespan = 2] was unfrozen
+Organism Dandelion [position = (2, 3), lifespan = 3] was unfrozen
+Organism Grass [position = (3, 3), lifespan = 3] was unfrozen
+Organism Dandelion [position = (4, 3), lifespan = 4] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 7] was unfrozen
+Organism Dandelion [position = (1, 4), lifespan = 6] was unfrozen
+Organism Dandelion [position = (2, 4), lifespan = 2] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 6] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 1] was unfrozen
+Organism Dandelion [position = (2, 5), lifespan = 4] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 1] was unfrozen
+Organism Dandelion [position = (4, 5), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 5] was unfrozen
+Freeze action was invoked at (3, 4) with radius 2
+Organism Dandelion [position = (1, 2), lifespan = 6] was frozen
+Organism Dandelion [position = (2, 2), lifespan = 5] was frozen
+Organism Grass [position = (3, 2), lifespan = 7] was frozen
+Organism Dandelion [position = (1, 3), lifespan = 2] was frozen
+Organism Dandelion [position = (2, 3), lifespan = 3] was frozen
+Organism Grass [position = (3, 3), lifespan = 3] was frozen
+Organism Dandelion [position = (4, 3), lifespan = 4] was frozen
+Organism Grass [position = (5, 3), lifespan = 7] was frozen
+Organism Dandelion [position = (1, 4), lifespan = 6] was frozen
+Organism Dandelion [position = (2, 4), lifespan = 2] was frozen
+Organism Dandelion [position = (4, 4), lifespan = 6] was frozen
+Organism Grass [position = (5, 4), lifespan = 1] was frozen
+Organism Dandelion [position = (2, 5), lifespan = 4] was frozen
+Organism Dandelion [position = (3, 5), lifespan = 1] was frozen
+Organism Dandelion [position = (4, 5), lifespan = 3] was frozen
+Organism Grass [position = (5, 5), lifespan = 5] was frozen
+Organism Wolf is trying to move from (7, 5) to (8, 4)
+Organism Wolf attacks organism Grass at (8, 4)
+Organism Grass at (8, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (8, 4), lifespan = 7] was removed
+Organism Wolf moved to a position (8, 4) after winning the battle
+Organism Wolf is trying to move from (12, 3) to (11, 2)
+Organism Wolf attacks organism Dandelion at (11, 2)
+Organism Dandelion at (11, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (11, 2), lifespan = 2] was removed
+Organism Wolf moved to a position (11, 2) after winning the battle
+Organism Sheep is trying to move from (0, 1) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (4, 1)
+Organism Sheep moved to an empty position (4, 1)
+Organism Sheep is trying to move from (2, 0) to (2, 1)
+Organism Sheep moved to an empty position (2, 1)
+Organism Sheep is trying to move from (1, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (1, 2)
+Organism Sheep attacks organism Dandelion at (1, 2)
+Organism Dandelion at (1, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 2), lifespan = 6] was removed
+Organism Sheep moved to a position (1, 2) after winning the battle
+Organism Sheep is trying to move from (3, 1) to (2, 0)
+Organism Sheep moved to an empty position (2, 0)
+World after the movements:
++--------------+
+| SS      DDDD |
+|SSS S    DDDDD|
+| SDG     DDW D|
+|DDDGDGG  GDD G|
+|DDDADGGGWGG TT|
+|D DDDGG  GGGT |
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (0, 2)
+Organism Sheep [position = (0, 2), lifespan = 10] was added
+Organism Sheep is born at (0, 0)
+Organism Sheep [position = (0, 0), lifespan = 10] was added
+Organism Sheep is born at (3, 0)
+Organism Sheep [position = (3, 0), lifespan = 10] was added
+Organism Grass is born at (7, 3)
+Organism Grass [position = (7, 3), lifespan = 8] was added
+Organism Grass is born at (11, 4)
+Organism Grass [position = (11, 4), lifespan = 8] was added
+Organism Dandelion is born at (12, 2)
+Organism Dandelion [position = (12, 2), lifespan = 6] was added
+Organism Grass is born at (8, 5)
+Organism Grass [position = (8, 5), lifespan = 8] was added
+Organism Dandelion is born at (13, 0)
+Organism Dandelion [position = (13, 0), lifespan = 6] was added
+Organism Dandelion is born at (1, 5)
+Organism Dandelion [position = (1, 5), lifespan = 6] was added
+Organism Grass is born at (7, 2)
+Organism Grass [position = (7, 2), lifespan = 8] was added
+World after the actions:
++--------------+
+|SSSS     DDDDD|
+|SSS S    DDDDD|
+|SSDG   G DDWDD|
+|DDDGDGGG GDD G|
+|DDDADGGGWGGGTT|
+|DDDDDGG GGGGT |
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (0, 1) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (0, 1), lifespan = 0] was removed
+Organism Dandelion at (13, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 1), lifespan = 0] was removed
+Organism Dandelion at (0, 3) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (0, 3), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSSS     DDDDD|
+| SS S    DDDD |
+|SSDG   G DDWDD|
+| DDGDGGG GDD G|
+|DDDADGGGWGGGTT|
+|DDDDDGG GGGGT |
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien at (3, 4) dies due to a cause 'DISAPPEARANCE'
+Organism Alien [position = (3, 4), lifespan = 1] was removed
+Unfreeze action was invoked at (3, 4) with radius 2
+Organism Sheep [position = (1, 2), lifespan = 7] was unfrozen
+Organism Dandelion [position = (2, 2), lifespan = 5] was unfrozen
+Organism Grass [position = (3, 2), lifespan = 7] was unfrozen
+Organism Dandelion [position = (1, 3), lifespan = 2] was unfrozen
+Organism Dandelion [position = (2, 3), lifespan = 3] was unfrozen
+Organism Grass [position = (3, 3), lifespan = 3] was unfrozen
+Organism Dandelion [position = (4, 3), lifespan = 4] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 7] was unfrozen
+Organism Dandelion [position = (1, 4), lifespan = 6] was unfrozen
+Organism Dandelion [position = (2, 4), lifespan = 2] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 6] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 1] was unfrozen
+Organism Dandelion [position = (1, 5), lifespan = 6] was unfrozen
+Organism Dandelion [position = (2, 5), lifespan = 4] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 1] was unfrozen
+Organism Dandelion [position = (4, 5), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 5] was unfrozen
+Turn 14 ends
+Turn 15 begins
+Organisms start their movements
+Organism Wolf is trying to move from (8, 4) to (7, 3)
+Organism Wolf attacks organism Grass at (7, 3)
+Organism Grass at (7, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (7, 3), lifespan = 8] was removed
+Organism Wolf moved to a position (7, 3) after winning the battle
+Organism Wolf is trying to move from (11, 2) to (12, 2)
+Organism Wolf attacks organism Dandelion at (12, 2)
+Organism Dandelion at (12, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (12, 2), lifespan = 6] was removed
+Organism Wolf moved to a position (12, 2) after winning the battle
+Organism Sheep is trying to move from (1, 1) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 1) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 1) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (1, 3)
+Organism Sheep attacks organism Dandelion at (1, 3)
+Organism Dandelion at (1, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 3), lifespan = 2] was removed
+Organism Sheep moved to a position (1, 3) after winning the battle
+Organism Sheep is trying to move from (2, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (1, 2)
+Organism Sheep moved to an empty position (1, 2)
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (3, 1)
+Organism Sheep moved to an empty position (3, 1)
+World after the movements:
++--------------+
+|SSS      DDDDD|
+| SSSS    DDDD |
+| SDG   G DD WD|
+| SDGDGGW GDD G|
+|DDD DGGG GGGTT|
+|DDDDDGG GGGGT |
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (5, 1)
+Organism Sheep [position = (5, 1), lifespan = 10] was added
+Organism Sheep is born at (0, 1)
+Organism Sheep [position = (0, 1), lifespan = 10] was added
+Organism Sheep is born at (0, 3)
+Organism Sheep [position = (0, 3), lifespan = 10] was added
+Organism Toadstool is born at (12, 3)
+Organism Toadstool [position = (12, 3), lifespan = 12] was added
+Organism Grass is born at (4, 2)
+Organism Grass [position = (4, 2), lifespan = 8] was added
+Organism Dandelion is born at (3, 4)
+Organism Dandelion [position = (3, 4), lifespan = 6] was added
+Organism Toadstool is born at (13, 5)
+Organism Toadstool [position = (13, 5), lifespan = 12] was added
+Organism Dandelion is born at (13, 1)
+Organism Dandelion [position = (13, 1), lifespan = 6] was added
+Organism Dandelion is born at (11, 2)
+Organism Dandelion [position = (11, 2), lifespan = 6] was added
+Organism Dandelion is born at (5, 2)
+Organism Dandelion [position = (5, 2), lifespan = 6] was added
+Organism Dandelion is born at (8, 1)
+Organism Dandelion [position = (8, 1), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSS      DDDDD|
+|SSSSSS  DDDDDD|
+| SDGGD G DDDWD|
+|SSDGDGGW GDDTG|
+|DDDDDGGG GGGTT|
+|DDDDDGG GGGGTT|
++--------------+
+
+Organisms start being vitalized
+Organism Grass at (5, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (5, 4), lifespan = 0] was removed
+Organism Dandelion at (3, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (3, 5), lifespan = 0] was removed
+Organism Dandelion at (12, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 0), lifespan = 0] was removed
+Organism Dandelion at (10, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (10, 2), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSS      DDD D|
+|SSSSSS  DDDDDD|
+| SDGGD G D DWD|
+|SSDGDGGW GDDTG|
+|DDDDD GG GGGTT|
+|DDD DGG GGGGTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 15 ends
+Turn 16 begins
+Organisms start their movements
+Organism Wolf is trying to move from (7, 3) to (7, 2)
+Organism Wolf attacks organism Grass at (7, 2)
+Organism Grass at (7, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (7, 2), lifespan = 7] was removed
+Organism Wolf moved to a position (7, 2) after winning the battle
+Organism Wolf is trying to move from (12, 2) to (11, 2)
+Organism Wolf attacks organism Dandelion at (11, 2)
+Organism Dandelion at (11, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (11, 2), lifespan = 6] was removed
+Organism Wolf moved to a position (11, 2) after winning the battle
+Organism Sheep is trying to move from (1, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 1) to (5, 2)
+Organism Sheep attacks organism Dandelion at (5, 2)
+Organism Dandelion at (5, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (5, 2), lifespan = 6] was removed
+Organism Sheep moved to a position (5, 2) after winning the battle
+Organism Sheep is trying to move from (2, 1) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (2, 2)
+Organism Sheep attacks organism Dandelion at (2, 2)
+Organism Dandelion at (2, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (2, 2), lifespan = 4] was removed
+Organism Sheep moved to a position (2, 2) after winning the battle
+Organism Sheep is trying to move from (2, 0) to (3, 0)
+Organism Sheep moved to an empty position (3, 0)
+Organism Sheep is trying to move from (1, 2) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 1) to (5, 0)
+Organism Sheep moved to an empty position (5, 0)
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 3) to (1, 4)
+Organism Sheep attacks organism Dandelion at (1, 4)
+Organism Dandelion at (1, 4) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 4), lifespan = 5] was removed
+Organism Sheep moved to a position (1, 4) after winning the battle
+World after the movements:
++--------------+
+|SS S S   DDD D|
+|SSSS    DDDDDD|
+| SSGGS W D W D|
+|  DGDGG  GDDTG|
+|DSDDD GG GGGTT|
+|DDD DGG GGGGTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (4, 0)
+Organism Sheep [position = (4, 0), lifespan = 10] was added
+Organism Grass is born at (7, 3)
+Organism Grass [position = (7, 3), lifespan = 8] was added
+Organism Grass is born at (8, 4)
+Organism Grass [position = (8, 4), lifespan = 8] was added
+Organism Dandelion is born at (1, 3)
+Organism Dandelion [position = (1, 3), lifespan = 6] was added
+Organism Grass is born at (5, 4)
+Organism Grass [position = (5, 4), lifespan = 8] was added
+Organism Dandelion is born at (10, 2)
+Organism Dandelion [position = (10, 2), lifespan = 6] was added
+Organism Grass is born at (6, 2)
+Organism Grass [position = (6, 2), lifespan = 8] was added
+Organism Dandelion is born at (12, 0)
+Organism Dandelion [position = (12, 0), lifespan = 6] was added
+Organism Dandelion is born at (3, 5)
+Organism Dandelion [position = (3, 5), lifespan = 6] was added
+Organism Grass is born at (12, 2)
+Organism Grass [position = (12, 2), lifespan = 8] was added
+Organism Grass is born at (8, 3)
+Organism Grass [position = (8, 3), lifespan = 8] was added
+Organism Grass is born at (7, 5)
+Organism Grass [position = (7, 5), lifespan = 8] was added
+Organism Dandelion is born at (0, 3)
+Organism Dandelion [position = (0, 3), lifespan = 6] was added
+Organism Grass is born at (8, 2)
+Organism Grass [position = (8, 2), lifespan = 8] was added
+Organism Dandelion is born at (8, 0)
+Organism Dandelion [position = (8, 0), lifespan = 6] was added
+World after the actions:
++--------------+
+|SS SSS  DDDDDD|
+|SSSS    DDDDDD|
+| SSGGSGWGDDWGD|
+|DDDGDGGGGGDDTG|
+|DSDDDGGGGGGGTT|
+|DDDDDGGGGGGGTT|
++--------------+
+
+Organisms start being vitalized
+Organism Grass at (6, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (6, 4), lifespan = 0] was removed
+Organism Grass at (10, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (10, 4), lifespan = 0] was removed
+Organism Grass at (9, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (9, 5), lifespan = 0] was removed
+Organism Dandelion at (2, 4) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (2, 4), lifespan = 0] was removed
+Organism Dandelion at (10, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (10, 1), lifespan = 0] was removed
+Organism Dandelion at (0, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (0, 5), lifespan = 0] was removed
+Organism Dandelion at (12, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 1), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SS SSS  DDDDDD|
+|SSSS    DD D D|
+| SSGGSGWGDDWGD|
+|DDDGDGGGGGDDTG|
+|DS DDG GGG GTT|
+| DDDDGGGG GGTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 16 ends
+Turn 17 begins
+Organisms start their movements
+Organism Wolf is trying to move from (7, 2) to (8, 3)
+Organism Wolf attacks organism Grass at (8, 3)
+Organism Grass at (8, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (8, 3), lifespan = 8] was removed
+Organism Wolf moved to a position (8, 3) after winning the battle
+Organism Wolf is trying to move from (11, 2) to (10, 1)
+Organism Wolf moved to an empty position (10, 1)
+Organism Sheep is trying to move from (1, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 2) to (6, 3)
+Organism Sheep attacks organism Grass at (6, 3)
+Organism Grass at (6, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (6, 3), lifespan = 2] was removed
+Organism Sheep moved to a position (6, 3) after winning the battle
+Organism Sheep is trying to move from (2, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (0, 0)
+Organism Sheep did not move to (0, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (3, 1)
+Organism Sheep did not move to (3, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (4, 1)
+Organism Sheep moved to an empty position (4, 1)
+Organism Sheep is trying to move from (1, 2) to (2, 3)
+Organism Sheep attacks organism Dandelion at (2, 3)
+Organism Dandelion at (2, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (2, 3), lifespan = 1] was removed
+Organism Sheep moved to a position (2, 3) after winning the battle
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (3, 2)
+Organism Sheep attacks organism Grass at (3, 2)
+Organism Grass at (3, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (3, 2), lifespan = 5] was removed
+Organism Sheep moved to a position (3, 2) after winning the battle
+Organism Sheep is trying to move from (5, 0) to (4, 1)
+Organism Sheep did not move to (4, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep moved to an empty position (1, 2)
+Organism Sheep is trying to move from (1, 4) to (1, 5)
+Organism Sheep attacks organism Dandelion at (1, 5)
+Organism Dandelion at (1, 5) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 5), lifespan = 4] was removed
+Organism Sheep moved to a position (1, 5) after winning the battle
+Organism Sheep is trying to move from (4, 0) to (3, 1)
+Organism Sheep moved to an empty position (3, 1)
+World after the movements:
++--------------+
+|SS   S  DDDDDD|
+| SSSS   DDWD D|
+| SSSG G GDD GD|
+|DDSGDGSGWGDDTG|
+|D  DDG GGG GTT|
+| SDDDGGGG GGTT|
++--------------+
+
+Organisms start their actions
+Organism Wolf is born at (7, 2)
+Organism Wolf [position = (7, 2), lifespan = 20] was added
+Organism Sheep is born at (0, 2)
+Organism Sheep [position = (0, 2), lifespan = 10] was added
+Organism Sheep is born at (3, 0)
+Organism Sheep [position = (3, 0), lifespan = 10] was added
+Organism Grass is born at (2, 4)
+Organism Grass [position = (2, 4), lifespan = 8] was added
+Organism Grass is born at (10, 4)
+Organism Grass [position = (10, 4), lifespan = 8] was added
+Organism Grass is born at (6, 4)
+Organism Grass [position = (6, 4), lifespan = 8] was added
+Organism Dandelion is born at (1, 4)
+Organism Dandelion [position = (1, 4), lifespan = 6] was added
+Organism Dandelion is born at (5, 2)
+Organism Dandelion [position = (5, 2), lifespan = 6] was added
+Organism Dandelion is born at (12, 1)
+Organism Dandelion [position = (12, 1), lifespan = 6] was added
+Organism Dandelion is born at (11, 2)
+Organism Dandelion [position = (11, 2), lifespan = 6] was added
+Organism Dandelion is born at (0, 5)
+Organism Dandelion [position = (0, 5), lifespan = 6] was added
+Organism Grass is born at (9, 5)
+Organism Grass [position = (9, 5), lifespan = 8] was added
+World after the actions:
++--------------+
+|SS S S  DDDDDD|
+| SSSS   DDWDDD|
+|SSSSGDGWGDDDGD|
+|DDSGDGSGWGDDTG|
+|DDGDDGGGGGGGTT|
+|DSDDDGGGGGGGTT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (1, 1) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (1, 1), lifespan = 0] was removed
+Organism Grass at (3, 3) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (3, 3), lifespan = 0] was removed
+Organism Grass at (11, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (11, 5), lifespan = 0] was removed
+Organism Dandelion at (4, 5) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (4, 5), lifespan = 0] was removed
+Organism Dandelion at (10, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (10, 0), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SS S S  DD DDD|
+|  SSS   DDWDDD|
+|SSSSGDGWGDDDGD|
+|DDS DGSGWGDDTG|
+|DDGDDGGGGGGGTT|
+|DSDD GGGGGG TT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien is born at (4, 5)
+Organism Alien [position = (4, 5), lifespan = 1] was added
+Turn 17 ends
+Turn 18 begins
+Organisms start their movements
+Unfreeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was unfrozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 4] was unfrozen
+Organism Sheep [position = (6, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (2, 4), lifespan = 8] was unfrozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 7] was unfrozen
+Organism Grass [position = (6, 4), lifespan = 8] was unfrozen
+Organism Dandelion [position = (2, 5), lifespan = 1] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 2] was unfrozen
+Organism Grass [position = (6, 5), lifespan = 3] was unfrozen
+Freeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was frozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was frozen
+Organism Grass [position = (5, 3), lifespan = 4] was frozen
+Organism Sheep [position = (6, 3), lifespan = 1] was frozen
+Organism Grass [position = (2, 4), lifespan = 8] was frozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was frozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was frozen
+Organism Grass [position = (5, 4), lifespan = 7] was frozen
+Organism Grass [position = (6, 4), lifespan = 8] was frozen
+Organism Dandelion [position = (2, 5), lifespan = 1] was frozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was frozen
+Organism Grass [position = (5, 5), lifespan = 2] was frozen
+Organism Grass [position = (6, 5), lifespan = 3] was frozen
+Organism Wolf is trying to move from (8, 3) to (8, 2)
+Organism Wolf attacks organism Grass at (8, 2)
+Organism Grass at (8, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (8, 2), lifespan = 7] was removed
+Organism Wolf moved to a position (8, 2) after winning the battle
+Organism Wolf is trying to move from (10, 1) to (9, 2)
+Organism Wolf attacks organism Dandelion at (9, 2)
+Organism Dandelion at (9, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (9, 2), lifespan = 2] was removed
+Organism Wolf moved to a position (9, 2) after winning the battle
+Organism Wolf is trying to move from (7, 2) to (6, 1)
+Organism Wolf moved to an empty position (6, 1)
+Organism Sheep is trying to move from (2, 1) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (1, 3)
+Organism Sheep attacks organism Dandelion at (1, 3)
+Organism Dandelion at (1, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 3), lifespan = 5] was removed
+Organism Sheep moved to a position (1, 3) after winning the battle
+Organism Sheep is trying to move from (4, 1) to (4, 0)
+Organism Sheep moved to an empty position (4, 0)
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (3, 2) to (3, 3)
+Organism Sheep moved to an empty position (3, 3)
+Organism Sheep is trying to move from (5, 0) to (4, 1)
+Organism Sheep moved to an empty position (4, 1)
+Organism Sheep is trying to move from (1, 2) to (0, 3)
+Organism Sheep attacks organism Dandelion at (0, 3)
+Organism Dandelion at (0, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (0, 3), lifespan = 5] was removed
+Organism Sheep moved to a position (0, 3) after winning the battle
+Organism Sheep is trying to move from (1, 5) to (2, 5)
+Organism Sheep attacks organism Dandelion at (2, 5)
+Organism Dandelion at (2, 5) dies due to a cause 'KILLED'
+Organism Dandelion [position = (2, 5), lifespan = 1] was removed
+Organism Sheep moved to a position (2, 5) after winning the battle
+Organism Sheep is trying to move from (3, 1) to (4, 2)
+Organism Sheep attacks organism Grass at (4, 2)
+Organism Grass at (4, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (4, 2), lifespan = 6] was removed
+Organism Sheep moved to a position (4, 2) after winning the battle
+Organism Sheep is trying to move from (0, 2) to (1, 2)
+Organism Sheep moved to an empty position (1, 2)
+Organism Sheep is trying to move from (3, 0) to (2, 0)
+Organism Sheep moved to an empty position (2, 0)
+World after the movements:
++--------------+
+| SS S   DD DDD|
+| SS S W DD DDD|
+| S  SDG WWDDGD|
+|SSSSDGSG GDDTG|
+|DDGDDGGGGGGGTT|
+|D SDAGGGGGG TT|
++--------------+
+
+Organisms start their actions
+Organism Wolf is born at (10, 1)
+Organism Wolf [position = (10, 1), lifespan = 20] was added
+Organism Sheep is born at (0, 1)
+Organism Sheep [position = (0, 1), lifespan = 10] was added
+Organism Sheep is born at (2, 2)
+Organism Sheep [position = (2, 2), lifespan = 10] was added
+Organism Sheep is born at (0, 0)
+Organism Sheep [position = (0, 0), lifespan = 10] was added
+Organism Sheep is born at (3, 2)
+Organism Sheep [position = (3, 2), lifespan = 10] was added
+Organism Toadstool is born at (11, 5)
+Organism Toadstool [position = (11, 5), lifespan = 12] was added
+Organism Grass is born at (8, 3)
+Organism Grass [position = (8, 3), lifespan = 8] was added
+Organism Dandelion is born at (10, 0)
+Organism Dandelion [position = (10, 0), lifespan = 6] was added
+Organism Dandelion is born at (1, 5)
+Organism Dandelion [position = (1, 5), lifespan = 6] was added
+Organism Dandelion is born at (7, 2)
+Organism Dandelion [position = (7, 2), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSS S   DDDDDD|
+|SSS S W DDWDDD|
+| SSSSDGDWWDDGD|
+|SSSSDGSGGGDDTG|
+|DDGDDGGGGGGGTT|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Toadstool at (13, 4) dies due to a cause 'OLD_AGE'
+Organism Toadstool [position = (13, 4), lifespan = 0] was removed
+Organism Dandelion at (11, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 0), lifespan = 0] was removed
+Organism Dandelion at (10, 3) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (10, 3), lifespan = 0] was removed
+Organism Dandelion at (0, 4) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (0, 4), lifespan = 0] was removed
+Organism Dandelion at (9, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (9, 1), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSS S   DDD DD|
+|SSS S W D WDDD|
+| SSSSDGDWWDDGD|
+|SSSSDGSGGG DTG|
+| DGDDGGGGGGGT |
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 18 ends
+Turn 19 begins
+Organisms start their movements
+Unfreeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was unfrozen
+Organism Sheep [position = (3, 3), lifespan = 6] was unfrozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 4] was unfrozen
+Organism Sheep [position = (6, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (2, 4), lifespan = 8] was unfrozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 7] was unfrozen
+Organism Grass [position = (6, 4), lifespan = 8] was unfrozen
+Organism Sheep [position = (2, 5), lifespan = 7] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 2] was unfrozen
+Organism Grass [position = (6, 5), lifespan = 3] was unfrozen
+Freeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was frozen
+Organism Sheep [position = (3, 3), lifespan = 6] was frozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was frozen
+Organism Grass [position = (5, 3), lifespan = 4] was frozen
+Organism Sheep [position = (6, 3), lifespan = 1] was frozen
+Organism Grass [position = (2, 4), lifespan = 8] was frozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was frozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was frozen
+Organism Grass [position = (5, 4), lifespan = 7] was frozen
+Organism Grass [position = (6, 4), lifespan = 8] was frozen
+Organism Sheep [position = (2, 5), lifespan = 7] was frozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was frozen
+Organism Grass [position = (5, 5), lifespan = 2] was frozen
+Organism Grass [position = (6, 5), lifespan = 3] was frozen
+Organism Wolf is trying to move from (8, 2) to (7, 1)
+Organism Wolf moved to an empty position (7, 1)
+Organism Wolf is trying to move from (9, 2) to (9, 3)
+Organism Wolf attacks organism Grass at (9, 3)
+Organism Grass at (9, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (9, 3), lifespan = 2] was removed
+Organism Wolf moved to a position (9, 3) after winning the battle
+Organism Wolf is trying to move from (6, 1) to (6, 0)
+Organism Wolf moved to an empty position (6, 0)
+Organism Wolf is trying to move from (10, 1) to (10, 0)
+Organism Wolf attacks organism Dandelion at (10, 0)
+Organism Dandelion at (10, 0) dies due to a cause 'KILLED'
+Organism Dandelion [position = (10, 0), lifespan = 6] was removed
+Organism Wolf moved to a position (10, 0) after winning the battle
+Organism Sheep is trying to move from (2, 1) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 0) to (3, 1)
+Organism Sheep moved to an empty position (3, 1)
+Organism Sheep is trying to move from (1, 1) to (0, 0)
+Organism Sheep did not move to (0, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 1) to (5, 1)
+Organism Sheep moved to an empty position (5, 1)
+Organism Sheep is trying to move from (0, 3) to (1, 4)
+Organism Sheep attacks organism Dandelion at (1, 4)
+Organism Dandelion at (1, 4) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 4), lifespan = 5] was removed
+Organism Sheep moved to a position (1, 4) after winning the battle
+Organism Sheep is trying to move from (4, 2) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 2) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+World after the movements:
++--------------+
+|SSS   W DDW DD|
+|SSSS S WD  DDD|
+| SSSSDGD  DDGD|
+| SSSDGSGGW DTG|
+| SGDDGGGGGGGT |
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (4, 0)
+Organism Sheep [position = (4, 0), lifespan = 10] was added
+Organism Sheep is born at (6, 1)
+Organism Sheep [position = (6, 1), lifespan = 10] was added
+Organism Sheep is born at (0, 3)
+Organism Sheep [position = (0, 3), lifespan = 10] was added
+Organism Grass is born at (13, 4)
+Organism Grass [position = (13, 4), lifespan = 8] was added
+Organism Dandelion is born at (10, 3)
+Organism Dandelion [position = (10, 3), lifespan = 6] was added
+Organism Dandelion is born at (10, 1)
+Organism Dandelion [position = (10, 1), lifespan = 6] was added
+Organism Dandelion is born at (9, 1)
+Organism Dandelion [position = (9, 1), lifespan = 6] was added
+Organism Dandelion is born at (8, 2)
+Organism Dandelion [position = (8, 2), lifespan = 6] was added
+Organism Dandelion is born at (9, 2)
+Organism Dandelion [position = (9, 2), lifespan = 6] was added
+Organism Dandelion is born at (11, 0)
+Organism Dandelion [position = (11, 0), lifespan = 6] was added
+Organism Dandelion is born at (7, 0)
+Organism Dandelion [position = (7, 0), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSS S WDDDWDDD|
+|SSSS SSWDDDDDD|
+| SSSSDGDDDDDGD|
+|SSSSDGSGGWDDTG|
+| SGDDGGGGGGGTG|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Grass at (13, 3) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (13, 3), lifespan = 0] was removed
+Organism Dandelion at (11, 3) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 3), lifespan = 0] was removed
+Organism Dandelion at (13, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 2), lifespan = 0] was removed
+Organism Dandelion at (11, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 1), lifespan = 0] was removed
+Organism Dandelion at (9, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (9, 0), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSS S WDD WDDD|
+|SSSS SSWDDD DD|
+| SSSSDGDDDDDG |
+|SSSSDGSGGWD T |
+| SGDDGGGGGGGTG|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 19 ends
+Turn 20 begins
+Organisms start their movements
+Unfreeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was unfrozen
+Organism Sheep [position = (3, 3), lifespan = 6] was unfrozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 4] was unfrozen
+Organism Sheep [position = (6, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (2, 4), lifespan = 8] was unfrozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 7] was unfrozen
+Organism Grass [position = (6, 4), lifespan = 8] was unfrozen
+Organism Sheep [position = (2, 5), lifespan = 7] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 2] was unfrozen
+Organism Grass [position = (6, 5), lifespan = 3] was unfrozen
+Freeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was frozen
+Organism Sheep [position = (3, 3), lifespan = 6] was frozen
+Organism Dandelion [position = (4, 3), lifespan = 1] was frozen
+Organism Grass [position = (5, 3), lifespan = 4] was frozen
+Organism Sheep [position = (6, 3), lifespan = 1] was frozen
+Organism Grass [position = (2, 4), lifespan = 8] was frozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was frozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was frozen
+Organism Grass [position = (5, 4), lifespan = 7] was frozen
+Organism Grass [position = (6, 4), lifespan = 8] was frozen
+Organism Sheep [position = (2, 5), lifespan = 7] was frozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was frozen
+Organism Grass [position = (5, 5), lifespan = 2] was frozen
+Organism Grass [position = (6, 5), lifespan = 3] was frozen
+Organism Wolf is trying to move from (7, 1) to (7, 0)
+Organism Wolf attacks organism Dandelion at (7, 0)
+Organism Dandelion at (7, 0) dies due to a cause 'KILLED'
+Organism Dandelion [position = (7, 0), lifespan = 6] was removed
+Organism Wolf moved to a position (7, 0) after winning the battle
+Organism Wolf is trying to move from (9, 3) to (10, 2)
+Organism Wolf attacks organism Dandelion at (10, 2)
+Organism Dandelion at (10, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (10, 2), lifespan = 3] was removed
+Organism Wolf moved to a position (10, 2) after winning the battle
+Organism Wolf is trying to move from (6, 0) to (7, 1)
+Organism Wolf moved to an empty position (7, 1)
+Organism Wolf is trying to move from (10, 0) to (10, 1)
+Organism Wolf attacks organism Dandelion at (10, 1)
+Organism Dandelion at (10, 1) dies due to a cause 'KILLED'
+Organism Dandelion [position = (10, 1), lifespan = 6] was removed
+Organism Wolf moved to a position (10, 1) after winning the battle
+Organism Sheep is trying to move from (2, 1) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (0, 0)
+Organism Sheep did not move to (0, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 1) to (5, 2)
+Organism Sheep attacks organism Dandelion at (5, 2)
+Organism Dandelion at (5, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (5, 2), lifespan = 4] was removed
+Organism Sheep moved to a position (5, 2) after winning the battle
+Organism Sheep is trying to move from (1, 4) to (1, 3)
+Organism Sheep did not move to (1, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 2) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (3, 1)
+Organism Sheep did not move to (3, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 2) to (4, 3)
+Organism Sheep attacks organism Dandelion at (4, 3)
+Organism Dandelion at (4, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (4, 3), lifespan = 1] was removed
+Organism Sheep moved to a position (4, 3) after winning the battle
+Organism Sheep is trying to move from (4, 0) to (3, 0)
+Organism Sheep moved to an empty position (3, 0)
+Organism Sheep is trying to move from (6, 1) to (7, 0)
+Organism Sheep attacks organism Wolf at (7, 0)
+Organism Sheep at (6, 1) dies due to a cause 'KILLED'
+Organism Sheep [position = (6, 1), lifespan = 10] was removed
+Organism Sheep is trying to move from (0, 3) to (0, 4)
+Organism Sheep moved to an empty position (0, 4)
+World after the movements:
++--------------+
+|SSSS   WD  DDD|
+|SSSS   WDDW DD|
+| SS SSGDDDWDG |
+| SSSSGSGG D T |
+|SSGDDGGGGGGGTG|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (3, 2)
+Organism Sheep [position = (3, 2), lifespan = 10] was added
+Organism Sheep is born at (4, 1)
+Organism Sheep [position = (4, 1), lifespan = 10] was added
+Organism Grass is born at (9, 3)
+Organism Grass [position = (9, 3), lifespan = 8] was added
+Organism Grass is born at (11, 3)
+Organism Grass [position = (11, 3), lifespan = 8] was added
+Organism Dandelion is born at (13, 2)
+Organism Dandelion [position = (13, 2), lifespan = 6] was added
+Organism Dandelion is born at (9, 0)
+Organism Dandelion [position = (9, 0), lifespan = 6] was added
+Organism Grass is born at (6, 1)
+Organism Grass [position = (6, 1), lifespan = 8] was added
+Organism Dandelion is born at (11, 1)
+Organism Dandelion [position = (11, 1), lifespan = 6] was added
+Organism Grass is born at (13, 3)
+Organism Grass [position = (13, 3), lifespan = 8] was added
+World after the actions:
++--------------+
+|SSSS   WDD DDD|
+|SSSSS GWDDWDDD|
+| SSSSSGDDDWDGD|
+| SSSSGSGGGDGTG|
+|SSGDDGGGGGGGTG|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Wolf at (7, 0) dies due to a cause 'OLD_AGE'
+Organism Wolf [position = (7, 0), lifespan = 0] was removed
+Organism Sheep at (2, 1) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (2, 1), lifespan = 0] was removed
+Organism Grass at (9, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (9, 4), lifespan = 0] was removed
+Organism Grass at (7, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (7, 4), lifespan = 0] was removed
+Organism Dandelion at (13, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 0), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSSS    DD DD |
+|SS SS GWDDWDDD|
+| SSSSSGDDDWDGD|
+| SSSSGSGGGDGTG|
+|SSGDDGG G GGTG|
+|DDSDAGGGGGGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien at (4, 5) dies due to a cause 'DISAPPEARANCE'
+Organism Alien [position = (4, 5), lifespan = 1] was removed
+Unfreeze action was invoked at (4, 5) with radius 2
+Organism Sheep [position = (2, 3), lifespan = 7] was unfrozen
+Organism Sheep [position = (3, 3), lifespan = 6] was unfrozen
+Organism Sheep [position = (4, 3), lifespan = 8] was unfrozen
+Organism Grass [position = (5, 3), lifespan = 4] was unfrozen
+Organism Sheep [position = (6, 3), lifespan = 1] was unfrozen
+Organism Grass [position = (2, 4), lifespan = 8] was unfrozen
+Organism Dandelion [position = (3, 4), lifespan = 4] was unfrozen
+Organism Dandelion [position = (4, 4), lifespan = 3] was unfrozen
+Organism Grass [position = (5, 4), lifespan = 7] was unfrozen
+Organism Grass [position = (6, 4), lifespan = 8] was unfrozen
+Organism Sheep [position = (2, 5), lifespan = 7] was unfrozen
+Organism Dandelion [position = (3, 5), lifespan = 5] was unfrozen
+Organism Grass [position = (5, 5), lifespan = 2] was unfrozen
+Organism Grass [position = (6, 5), lifespan = 3] was unfrozen
+Turn 20 ends
+Turn 21 begins
+Organisms start their movements
+Organism Wolf is trying to move from (10, 2) to (10, 3)
+Organism Wolf attacks organism Dandelion at (10, 3)
+Organism Dandelion at (10, 3) dies due to a cause 'KILLED'
+Organism Dandelion [position = (10, 3), lifespan = 5] was removed
+Organism Wolf moved to a position (10, 3) after winning the battle
+Organism Wolf is trying to move from (7, 1) to (7, 2)
+Organism Wolf attacks organism Dandelion at (7, 2)
+Organism Dandelion at (7, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (7, 2), lifespan = 4] was removed
+Organism Wolf moved to a position (7, 2) after winning the battle
+Organism Wolf is trying to move from (10, 1) to (11, 1)
+Organism Wolf attacks organism Dandelion at (11, 1)
+Organism Dandelion at (11, 1) dies due to a cause 'KILLED'
+Organism Dandelion [position = (11, 1), lifespan = 6] was removed
+Organism Wolf moved to a position (11, 1) after winning the battle
+Organism Sheep is trying to move from (6, 3) to (7, 2)
+Organism Sheep attacks organism Wolf at (7, 2)
+Organism Sheep at (6, 3) dies due to a cause 'KILLED'
+Organism Sheep [position = (6, 3), lifespan = 1] was removed
+Organism Sheep is trying to move from (1, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 3) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 3) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 2) to (5, 3)
+Organism Sheep attacks organism Grass at (5, 3)
+Organism Grass at (5, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (5, 3), lifespan = 4] was removed
+Organism Sheep moved to a position (5, 3) after winning the battle
+Organism Sheep is trying to move from (1, 4) to (2, 4)
+Organism Sheep attacks organism Grass at (2, 4)
+Organism Grass at (2, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (2, 4), lifespan = 8] was removed
+Organism Sheep moved to a position (2, 4) after winning the battle
+Organism Sheep is trying to move from (2, 5) to (3, 4)
+Organism Sheep attacks organism Dandelion at (3, 4)
+Organism Dandelion at (3, 4) dies due to a cause 'KILLED'
+Organism Dandelion [position = (3, 4), lifespan = 4] was removed
+Organism Sheep moved to a position (3, 4) after winning the battle
+Organism Sheep is trying to move from (4, 2) to (3, 3)
+Organism Sheep did not move to (3, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (0, 0)
+Organism Sheep did not move to (0, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (1, 3)
+Organism Sheep did not move to (1, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 3) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (4, 0)
+Organism Sheep moved to an empty position (4, 0)
+Organism Sheep is trying to move from (0, 4) to (0, 5)
+Organism Sheep attacks organism Dandelion at (0, 5)
+Organism Dandelion at (0, 5) dies due to a cause 'KILLED'
+Organism Dandelion [position = (0, 5), lifespan = 3] was removed
+Organism Sheep moved to a position (0, 5) after winning the battle
+Organism Sheep is trying to move from (3, 2) to (3, 1)
+Organism Sheep did not move to (3, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 1) to (3, 0)
+Organism Sheep moved to an empty position (3, 0)
+World after the movements:
++--------------+
+|SSSSS   DD DD |
+|SS S  G DD WDD|
+| SSSS GWDD DGD|
+| SSSSS GGGWGTG|
+|  SSDGG G GGTG|
+|SD D GGGGGGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (2, 1)
+Organism Sheep [position = (2, 1), lifespan = 10] was added
+Organism Sheep is born at (0, 2)
+Organism Sheep [position = (0, 2), lifespan = 10] was added
+Organism Sheep is born at (1, 4)
+Organism Sheep [position = (1, 4), lifespan = 10] was added
+Organism Sheep is born at (4, 5)
+Organism Sheep [position = (4, 5), lifespan = 10] was added
+Organism Sheep is born at (0, 3)
+Organism Sheep [position = (0, 3), lifespan = 10] was added
+Organism Grass is born at (7, 4)
+Organism Grass [position = (7, 4), lifespan = 8] was added
+Organism Grass is born at (9, 4)
+Organism Grass [position = (9, 4), lifespan = 8] was added
+Organism Dandelion is born at (13, 0)
+Organism Dandelion [position = (13, 0), lifespan = 6] was added
+Organism Dandelion is born at (7, 0)
+Organism Dandelion [position = (7, 0), lifespan = 6] was added
+Organism Grass is born at (6, 3)
+Organism Grass [position = (6, 3), lifespan = 8] was added
+Organism Dandelion is born at (7, 1)
+Organism Dandelion [position = (7, 1), lifespan = 6] was added
+Organism Dandelion is born at (10, 1)
+Organism Dandelion [position = (10, 1), lifespan = 6] was added
+Organism Dandelion is born at (0, 4)
+Organism Dandelion [position = (0, 4), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSSSS  DDD DDD|
+|SSSS  GDDDDWDD|
+|SSSSS GWDD DGD|
+|SSSSSSGGGGWGTG|
+|DSSSDGGGGGGGTG|
+|SD DSGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (1, 0) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (1, 0), lifespan = 0] was removed
+Organism Sheep at (1, 3) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (1, 3), lifespan = 0] was removed
+Organism Toadstool at (12, 4) dies due to a cause 'OLD_AGE'
+Organism Toadstool [position = (12, 4), lifespan = 0] was removed
+Organism Grass at (10, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (10, 5), lifespan = 0] was removed
+Organism Dandelion at (13, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (13, 1), lifespan = 0] was removed
+Organism Dandelion at (8, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (8, 1), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|S SSS  DDD DDD|
+|SSSS  GD DDWD |
+|SSSSS GWDD DGD|
+|S SSSSGGGGWGTG|
+|DSSSDGGGGGGG G|
+|SD DSGGGGG TTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 21 ends
+Turn 22 begins
+Organisms start their movements
+Organism Wolf is trying to move from (10, 3) to (11, 4)
+Organism Wolf attacks organism Grass at (11, 4)
+Organism Grass at (11, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (11, 4), lifespan = 1] was removed
+Organism Wolf moved to a position (11, 4) after winning the battle
+Organism Wolf is trying to move from (7, 2) to (6, 2)
+Organism Wolf attacks organism Grass at (6, 2)
+Organism Grass at (6, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (6, 2), lifespan = 3] was removed
+Organism Wolf moved to a position (6, 2) after winning the battle
+Organism Wolf is trying to move from (11, 1) to (12, 2)
+Organism Wolf attacks organism Grass at (12, 2)
+Organism Grass at (12, 2) dies due to a cause 'KILLED'
+Organism Grass [position = (12, 2), lifespan = 3] was removed
+Organism Wolf moved to a position (12, 2) after winning the battle
+Organism Sheep is trying to move from (3, 1) to (4, 1)
+Organism Sheep moved to an empty position (4, 1)
+Organism Sheep is trying to move from (2, 3) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 3) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 3) to (4, 2)
+Organism Sheep did not move to (4, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 4) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 4) to (4, 4)
+Organism Sheep attacks organism Dandelion at (4, 4)
+Organism Dandelion at (4, 4) dies due to a cause 'KILLED'
+Organism Dandelion [position = (4, 4), lifespan = 2] was removed
+Organism Sheep moved to a position (4, 4) after winning the battle
+Organism Sheep is trying to move from (4, 2) to (5, 2)
+Organism Sheep moved to an empty position (5, 2)
+Organism Sheep is trying to move from (1, 2) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (3, 3)
+Organism Sheep did not move to (3, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 3) to (4, 4)
+Organism Sheep did not move to (4, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 0) to (3, 1)
+Organism Sheep moved to an empty position (3, 1)
+Organism Sheep is trying to move from (0, 5) to (1, 5)
+Organism Sheep attacks organism Dandelion at (1, 5)
+Organism Dandelion at (1, 5) dies due to a cause 'KILLED'
+Organism Dandelion [position = (1, 5), lifespan = 3] was removed
+Organism Sheep moved to a position (1, 5) after winning the battle
+Organism Sheep is trying to move from (3, 2) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 1) to (3, 1)
+Organism Sheep did not move to (3, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 4) to (0, 3)
+Organism Sheep did not move to (0, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 5) to (3, 5)
+Organism Sheep attacks organism Dandelion at (3, 5)
+Organism Dandelion at (3, 5) dies due to a cause 'KILLED'
+Organism Dandelion [position = (3, 5), lifespan = 4] was removed
+Organism Sheep moved to a position (3, 5) after winning the battle
+Organism Sheep is trying to move from (0, 3) to (0, 4)
+Organism Sheep attacks organism Dandelion at (0, 4)
+Organism Dandelion at (0, 4) dies due to a cause 'KILLED'
+Organism Dandelion [position = (0, 4), lifespan = 6] was removed
+Organism Sheep moved to a position (0, 4) after winning the battle
+World after the movements:
++--------------+
+|S SS   DDD DDD|
+|SSSSS GD DD D |
+|SSSS SW DD DWD|
+|  SSSSGGGG GTG|
+|SSS SGGGGGGW G|
+| S S GGGGG TTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (4, 0)
+Organism Sheep [position = (4, 0), lifespan = 10] was added
+Organism Sheep is born at (1, 0)
+Organism Sheep [position = (1, 0), lifespan = 10] was added
+Organism Sheep is born at (4, 2)
+Organism Sheep [position = (4, 2), lifespan = 10] was added
+Organism Sheep is born at (2, 5)
+Organism Sheep [position = (2, 5), lifespan = 10] was added
+Organism Sheep is born at (1, 3)
+Organism Sheep [position = (1, 3), lifespan = 10] was added
+Organism Sheep is born at (3, 4)
+Organism Sheep [position = (3, 4), lifespan = 10] was added
+Organism Grass is born at (4, 5)
+Organism Grass [position = (4, 5), lifespan = 8] was added
+Organism Toadstool is born at (12, 4)
+Organism Toadstool [position = (12, 4), lifespan = 12] was added
+Organism Grass is born at (7, 2)
+Organism Grass [position = (7, 2), lifespan = 8] was added
+Organism Dandelion is born at (13, 1)
+Organism Dandelion [position = (13, 1), lifespan = 6] was added
+Organism Dandelion is born at (8, 1)
+Organism Dandelion [position = (8, 1), lifespan = 6] was added
+Organism Grass is born at (10, 5)
+Organism Grass [position = (10, 5), lifespan = 8] was added
+Organism Dandelion is born at (11, 1)
+Organism Dandelion [position = (11, 1), lifespan = 6] was added
+Organism Dandelion is born at (10, 3)
+Organism Dandelion [position = (10, 3), lifespan = 6] was added
+Organism Dandelion is born at (10, 0)
+Organism Dandelion [position = (10, 0), lifespan = 6] was added
+Organism Dandelion is born at (10, 2)
+Organism Dandelion [position = (10, 2), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSSSS  DDDDDDD|
+|SSSSS GDDDDDDD|
+|SSSSSSWGDDDDWD|
+| SSSSSGGGGDGTG|
+|SSSSSGGGGGGWTG|
+| SSSGGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (4, 1) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (4, 1), lifespan = 0] was removed
+Organism Grass at (5, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (5, 5), lifespan = 0] was removed
+Organism Grass at (8, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (8, 5), lifespan = 0] was removed
+Organism Dandelion at (12, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 0), lifespan = 0] was removed
+Organism Dandelion at (8, 0) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (8, 0), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSSSS  D DDD D|
+|SSSS  GDDDDDDD|
+|SSSSSSWGDDDDWD|
+| SSSSSGGGGDGTG|
+|SSSSSGGGGGGWTG|
+| SSSG GG GGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 22 ends
+Turn 23 begins
+Organisms start their movements
+Organism Wolf is trying to move from (11, 4) to (11, 3)
+Organism Wolf attacks organism Grass at (11, 3)
+Organism Grass at (11, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (11, 3), lifespan = 6] was removed
+Organism Wolf moved to a position (11, 3) after winning the battle
+Organism Wolf is trying to move from (6, 2) to (5, 3)
+Organism Wolf attacks organism Sheep at (5, 3)
+Organism Sheep at (5, 3) dies due to a cause 'KILLED'
+Organism Sheep [position = (5, 3), lifespan = 3] was removed
+Organism Wolf moved to a position (5, 3) after winning the battle
+Organism Wolf is trying to move from (12, 2) to (11, 1)
+Organism Wolf attacks organism Dandelion at (11, 1)
+Organism Dandelion at (11, 1) dies due to a cause 'KILLED'
+Organism Dandelion [position = (11, 1), lifespan = 6] was removed
+Organism Wolf moved to a position (11, 1) after winning the battle
+Organism Sheep is trying to move from (2, 3) to (3, 3)
+Organism Sheep did not move to (3, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 3) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 4) to (1, 4)
+Organism Sheep did not move to (1, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 4) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 2) to (4, 3)
+Organism Sheep did not move to (4, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (3, 2)
+Organism Sheep did not move to (3, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 3) to (5, 2)
+Organism Sheep did not move to (5, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (4, 1)
+Organism Sheep moved to an empty position (4, 1)
+Organism Sheep is trying to move from (1, 5) to (0, 4)
+Organism Sheep did not move to (0, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 2) to (4, 1)
+Organism Sheep did not move to (4, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 1) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (0, 3)
+Organism Sheep moved to an empty position (0, 3)
+Organism Sheep is trying to move from (1, 4) to (1, 3)
+Organism Sheep did not move to (1, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 5) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 4) to (1, 5)
+Organism Sheep did not move to (1, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 0) to (5, 1)
+Organism Sheep moved to an empty position (5, 1)
+Organism Sheep is trying to move from (1, 0) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 2) to (3, 3)
+Organism Sheep did not move to (3, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 5) to (1, 5)
+Organism Sheep did not move to (1, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (2, 2)
+Organism Sheep did not move to (2, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 4) to (4, 4)
+Organism Sheep did not move to (4, 4) because there was an organism of the same species
+World after the movements:
++--------------+
+|SSSS   D DDD D|
+|SSS SSGDDDDWDD|
+| SSSSS GDDDD D|
+|SSSSSWGGGGDWTG|
+|SSSSSGGGGGG TG|
+| SSSG GG GGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (6, 2)
+Organism Sheep [position = (6, 2), lifespan = 10] was added
+Organism Sheep is born at (3, 1)
+Organism Sheep [position = (3, 1), lifespan = 10] was added
+Organism Sheep is born at (0, 2)
+Organism Sheep [position = (0, 2), lifespan = 10] was added
+Organism Sheep is born at (5, 0)
+Organism Sheep [position = (5, 0), lifespan = 10] was added
+Organism Sheep is born at (0, 5)
+Organism Sheep [position = (0, 5), lifespan = 10] was added
+Organism Grass is born at (5, 5)
+Organism Grass [position = (5, 5), lifespan = 8] was added
+Organism Toadstool is born at (11, 4)
+Organism Toadstool [position = (11, 4), lifespan = 12] was added
+Organism Toadstool is born at (12, 2)
+Organism Toadstool [position = (12, 2), lifespan = 12] was added
+Organism Grass is born at (8, 5)
+Organism Grass [position = (8, 5), lifespan = 8] was added
+Organism Dandelion is born at (12, 0)
+Organism Dandelion [position = (12, 0), lifespan = 6] was added
+Organism Dandelion is born at (8, 0)
+Organism Dandelion [position = (8, 0), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSSS S DDDDDDD|
+|SSSSSSGDDDDWDD|
+|SSSSSSSGDDDDTD|
+|SSSSSWGGGGDWTG|
+|SSSSSGGGGGGTTG|
+|SSSSGGGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Grass at (6, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (6, 5), lifespan = 0] was removed
+Organism Dandelion at (12, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (12, 1), lifespan = 0] was removed
+Organism Dandelion at (11, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (11, 2), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSSS S DDDDDDD|
+|SSSSSSGDDDDW D|
+|SSSSSSSGDDD TD|
+|SSSSSWGGGGDWTG|
+|SSSSSGGGGGGTTG|
+|SSSSGG GGGGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 23 ends
+Turn 24 begins
+Organisms start their movements
+Organism Wolf is trying to move from (11, 3) to (10, 2)
+Organism Wolf attacks organism Dandelion at (10, 2)
+Organism Dandelion at (10, 2) dies due to a cause 'KILLED'
+Organism Dandelion [position = (10, 2), lifespan = 5] was removed
+Organism Wolf moved to a position (10, 2) after winning the battle
+Organism Wolf is trying to move from (5, 3) to (4, 2)
+Organism Wolf attacks organism Sheep at (4, 2)
+Organism Sheep at (4, 2) dies due to a cause 'KILLED'
+Organism Sheep [position = (4, 2), lifespan = 9] was removed
+Organism Wolf moved to a position (4, 2) after winning the battle
+Organism Wolf is trying to move from (11, 1) to (11, 0)
+Organism Wolf attacks organism Dandelion at (11, 0)
+Organism Dandelion at (11, 0) dies due to a cause 'KILLED'
+Organism Dandelion [position = (11, 0), lifespan = 2] was removed
+Organism Wolf moved to a position (11, 0) after winning the battle
+Organism Sheep is trying to move from (2, 3) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 1) to (1, 0)
+Organism Sheep did not move to (1, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 3) to (4, 2)
+Organism Sheep attacks organism Wolf at (4, 2)
+Organism Sheep at (3, 3) dies due to a cause 'KILLED'
+Organism Sheep [position = (3, 3), lifespan = 3] was removed
+Organism Sheep is trying to move from (2, 4) to (1, 5)
+Organism Sheep did not move to (1, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 4) to (5, 5)
+Organism Sheep attacks organism Grass at (5, 5)
+Organism Grass at (5, 5) dies due to a cause 'KILLED'
+Organism Grass [position = (5, 5), lifespan = 8] was removed
+Organism Sheep moved to a position (5, 5) after winning the battle
+Organism Sheep is trying to move from (5, 2) to (5, 3)
+Organism Sheep moved to an empty position (5, 3)
+Organism Sheep is trying to move from (1, 2) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 1) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (3, 1)
+Organism Sheep did not move to (3, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 3) to (3, 3)
+Organism Sheep moved to an empty position (3, 3)
+Organism Sheep is trying to move from (4, 1) to (4, 0)
+Organism Sheep moved to an empty position (4, 0)
+Organism Sheep is trying to move from (1, 5) to (1, 4)
+Organism Sheep did not move to (1, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 2) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 0) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 1) to (2, 0)
+Organism Sheep did not move to (2, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 3) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 4) to (2, 5)
+Organism Sheep did not move to (2, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 5) to (2, 5)
+Organism Sheep did not move to (2, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 4) to (0, 5)
+Organism Sheep did not move to (0, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 1) to (5, 2)
+Organism Sheep moved to an empty position (5, 2)
+Organism Sheep is trying to move from (1, 0) to (0, 0)
+Organism Sheep did not move to (0, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 5) to (3, 5)
+Organism Sheep did not move to (3, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (1, 2)
+Organism Sheep did not move to (1, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 4) to (3, 5)
+Organism Sheep did not move to (3, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (6, 2) to (5, 3)
+Organism Sheep did not move to (5, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 1) to (4, 0)
+Organism Sheep did not move to (4, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 2) to (1, 3)
+Organism Sheep did not move to (1, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 0) to (4, 0)
+Organism Sheep did not move to (4, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 5) to (1, 4)
+Organism Sheep did not move to (1, 4) because there was an organism of the same species
+World after the movements:
++--------------+
+|SSSSSS DDDDWDD|
+|SSSS  GDDDD  D|
+|SSSSWSSGDDW TD|
+|SSSS SGGGGD TG|
+|SSSS GGGGGGTTG|
+|SSSSGS GGGGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (4, 4)
+Organism Sheep [position = (4, 4), lifespan = 10] was added
+Organism Sheep is born at (4, 3)
+Organism Sheep [position = (4, 3), lifespan = 10] was added
+Organism Sheep is born at (4, 1)
+Organism Sheep [position = (4, 1), lifespan = 10] was added
+Organism Grass is born at (6, 5)
+Organism Grass [position = (6, 5), lifespan = 8] was added
+Organism Grass is born at (11, 3)
+Organism Grass [position = (11, 3), lifespan = 8] was added
+Organism Dandelion is born at (12, 1)
+Organism Dandelion [position = (12, 1), lifespan = 6] was added
+Organism Grass is born at (5, 1)
+Organism Grass [position = (5, 1), lifespan = 8] was added
+Organism Dandelion is born at (6, 0)
+Organism Dandelion [position = (6, 0), lifespan = 6] was added
+Organism Dandelion is born at (11, 1)
+Organism Dandelion [position = (11, 1), lifespan = 6] was added
+World after the actions:
++--------------+
+|SSSSSSDDDDDWDD|
+|SSSSSGGDDDDDDD|
+|SSSSWSSGDDW TD|
+|SSSSSSGGGGDGTG|
+|SSSSSGGGGGGTTG|
+|SSSSGSGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (1, 1) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (1, 1), lifespan = 0] was removed
+Organism Grass at (7, 3) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (7, 3), lifespan = 0] was removed
+Organism Grass at (8, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (8, 4), lifespan = 0] was removed
+Organism Grass at (7, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (7, 5), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SSSSSSDDDDDWDD|
+|S SSSGGDDDDDDD|
+|SSSSWSSGDDW TD|
+|SSSSSSG GGDGTG|
+|SSSSSGGG GGTTG|
+|SSSSGSG GGGTTT|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Turn 24 ends
+Turn 25 begins
+Organisms start their movements
+Organism Wolf is trying to move from (10, 2) to (9, 3)
+Organism Wolf attacks organism Grass at (9, 3)
+Organism Grass at (9, 3) dies due to a cause 'KILLED'
+Organism Grass [position = (9, 3), lifespan = 4] was removed
+Organism Wolf moved to a position (9, 3) after winning the battle
+Organism Wolf is trying to move from (4, 2) to (3, 1)
+Organism Wolf attacks organism Sheep at (3, 1)
+Organism Sheep at (3, 1) dies due to a cause 'KILLED'
+Organism Sheep [position = (3, 1), lifespan = 9] was removed
+Organism Wolf moved to a position (3, 1) after winning the battle
+Organism Wolf is trying to move from (11, 0) to (12, 1)
+Organism Wolf attacks organism Dandelion at (12, 1)
+Organism Dandelion at (12, 1) dies due to a cause 'KILLED'
+Organism Dandelion [position = (12, 1), lifespan = 6] was removed
+Organism Wolf moved to a position (12, 1) after winning the battle
+Organism Sheep is trying to move from (2, 3) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 4) to (2, 5)
+Organism Sheep did not move to (2, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 5) to (5, 4)
+Organism Sheep attacks organism Grass at (5, 4)
+Organism Grass at (5, 4) dies due to a cause 'KILLED'
+Organism Grass [position = (5, 4), lifespan = 3] was removed
+Organism Sheep moved to a position (5, 4) after winning the battle
+Organism Sheep is trying to move from (5, 3) to (5, 4)
+Organism Sheep did not move to (5, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 2) to (0, 2)
+Organism Sheep did not move to (0, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 0) to (1, 1)
+Organism Sheep moved to an empty position (1, 1)
+Organism Sheep is trying to move from (0, 1) to (1, 1)
+Organism Sheep did not move to (1, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 2) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 0) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 3) to (2, 4)
+Organism Sheep did not move to (2, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 0) to (3, 0)
+Organism Sheep did not move to (3, 0) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 5) to (0, 4)
+Organism Sheep did not move to (0, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 2) to (4, 2)
+Organism Sheep moved to an empty position (4, 2)
+Organism Sheep is trying to move from (3, 0) to (2, 1)
+Organism Sheep did not move to (2, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (2, 1) to (3, 2)
+Organism Sheep moved to an empty position (3, 2)
+Organism Sheep is trying to move from (0, 3) to (0, 4)
+Organism Sheep did not move to (0, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 4) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 5) to (3, 4)
+Organism Sheep did not move to (3, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 4) to (0, 5)
+Organism Sheep did not move to (0, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 2) to (6, 2)
+Organism Sheep did not move to (6, 2) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 0) to (2, 1)
+Organism Sheep moved to an empty position (2, 1)
+Organism Sheep is trying to move from (2, 5) to (3, 5)
+Organism Sheep did not move to (3, 5) because there was an organism of the same species
+Organism Sheep is trying to move from (1, 3) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (3, 4) to (2, 3)
+Organism Sheep did not move to (2, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (6, 2) to (6, 1)
+Organism Sheep attacks organism Grass at (6, 1)
+Organism Grass at (6, 1) dies due to a cause 'KILLED'
+Organism Grass [position = (6, 1), lifespan = 4] was removed
+Organism Sheep moved to a position (6, 1) after winning the battle
+Organism Sheep is trying to move from (0, 2) to (0, 1)
+Organism Sheep did not move to (0, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (5, 0) to (4, 1)
+Organism Sheep did not move to (4, 1) because there was an organism of the same species
+Organism Sheep is trying to move from (0, 5) to (0, 4)
+Organism Sheep did not move to (0, 4) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 4) to (5, 5)
+Organism Sheep moved to an empty position (5, 5)
+Organism Sheep is trying to move from (4, 3) to (3, 3)
+Organism Sheep did not move to (3, 3) because there was an organism of the same species
+Organism Sheep is trying to move from (4, 1) to (3, 1)
+Organism Sheep attacks organism Wolf at (3, 1)
+Organism Sheep at (4, 1) dies due to a cause 'KILLED'
+Organism Sheep [position = (4, 1), lifespan = 10] was removed
+World after the movements:
++--------------+
+|S  SSSDDDDD DD|
+|SSSW GSDDDDDWD|
+|SSSSSS GDD  TD|
+|SSSSSSG GWDGTG|
+|SSSS SGG GGTTG|
+|SSSSGSG GGGTTT|
++--------------+
+
+Organisms start their actions
+Organism Sheep is born at (1, 0)
+Organism Sheep [position = (1, 0), lifespan = 10] was added
+Organism Sheep is born at (4, 4)
+Organism Sheep [position = (4, 4), lifespan = 10] was added
+Organism Sheep is born at (4, 1)
+Organism Sheep [position = (4, 1), lifespan = 10] was added
+Organism Toadstool is born at (11, 2)
+Organism Toadstool [position = (11, 2), lifespan = 12] was added
+Organism Grass is born at (7, 5)
+Organism Grass [position = (7, 5), lifespan = 8] was added
+Organism Grass is born at (8, 4)
+Organism Grass [position = (8, 4), lifespan = 8] was added
+Organism Grass is born at (7, 3)
+Organism Grass [position = (7, 3), lifespan = 8] was added
+Organism Dandelion is born at (10, 2)
+Organism Dandelion [position = (10, 2), lifespan = 6] was added
+Organism Grass is born at (6, 2)
+Organism Grass [position = (6, 2), lifespan = 8] was added
+Organism Dandelion is born at (11, 0)
+Organism Dandelion [position = (11, 0), lifespan = 6] was added
+World after the actions:
++--------------+
+|SS SSSDDDDDDDD|
+|SSSWSGSDDDDDWD|
+|SSSSSSGGDDDTTD|
+|SSSSSSGGGWDGTG|
+|SSSSSSGGGGGTTG|
+|SSSSGSGGGGGTTT|
++--------------+
+
+Organisms start being vitalized
+Organism Sheep at (2, 4) dies due to a cause 'OLD_AGE'
+Organism Sheep [position = (2, 4), lifespan = 0] was removed
+Organism Toadstool at (12, 5) dies due to a cause 'OLD_AGE'
+Organism Toadstool [position = (12, 5), lifespan = 0] was removed
+Organism Grass at (10, 4) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (10, 4), lifespan = 0] was removed
+Organism Grass at (9, 5) dies due to a cause 'OLD_AGE'
+Organism Grass [position = (9, 5), lifespan = 0] was removed
+Organism Dandelion at (9, 1) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (9, 1), lifespan = 0] was removed
+Organism Dandelion at (8, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (8, 2), lifespan = 0] was removed
+Organism Dandelion at (9, 2) dies due to a cause 'OLD_AGE'
+Organism Dandelion [position = (9, 2), lifespan = 0] was removed
+World after the vitalization:
++--------------+
+|SS SSSDDDDDDDD|
+|SSSWSGSDD DDWD|
+|SSSSSSGG  DTTD|
+|SSSSSSGGGWDGTG|
+|SS SSSGGGG TTG|
+|SSSSGSGGG GT T|
++--------------+
+
+Organism corpses are being purged
+Random events are happening now
+Organism Alien is born at (10, 4)
+Organism Alien [position = (10, 4), lifespan = 1] was added
+Turn 25 ends
