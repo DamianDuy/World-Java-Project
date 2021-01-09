@@ -56,7 +56,9 @@ public class World {
         }
 
         LOGGER.info(String.format("Turn %d begins", this.turnCounter));
+        worldWriter.print(String.format("Turn %d begins", this.turnCounter));
         LOGGER.info("Organisms start their movements");
+        worldWriter.print("Organisms start their movements");
         this.makeMoves();
         LOGGER.info(
             String.format(
@@ -64,12 +66,21 @@ public class World {
                 this.board.toString()
             )
         );
+        worldWriter.print(String.format(
+                "World after the movements:\n%s",
+                this.board.toString()
+        ));
         LOGGER.info("Organisms start their actions");
+        worldWriter.print("Organisms start their actions");
         this.makeActions();
         LOGGER.info(
             String.format("World after the actions:\n%s", this.board.toString())
         );
+        worldWriter.print(
+                String.format("World after the actions:\n%s", this.board.toString())
+        );
         LOGGER.info("Organisms start being vitalized");
+        worldWriter.print("Organisms start being vitalized");
         this.vitalizeOrganisms();
         LOGGER.info(
             String.format(
@@ -77,15 +88,22 @@ public class World {
                 this.board.toString()
             )
         );
+        worldWriter.print(String.format(
+                "World after the vitalization:\n%s",
+                this.board.toString()
+        ));
         LOGGER.info("Organism corpses are being purged");
+        worldWriter.print("Organism corpses are being purged");
         this.purgeDead();
-        LOGGER.info("Random events are happening now");
         if (areRandomEvents) {
+            LOGGER.info("Random events are happening now");
+            worldWriter.print("Random events are happening now");
             this.makeRandomEvents();
         }
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
         LOGGER.info(String.format("Turn %d ends", this.turnCounter));
+        worldWriter.print(String.format("Turn %d ends", this.turnCounter));
 
         this.turnCounter++;
     }
@@ -100,7 +118,13 @@ public class World {
                         organism.getPosition().toString()
                 )
         );
+        worldWriter.print(String.format(
+                "Organism %s is born at %s",
+                organism.name(),
+                organism.getPosition().toString()
+        ));
         LOGGER.info(String.format("%s was added", organism.toString()));
+        worldWriter.print(String.format("%s was added", organism.toString()));
     }
 
     public void removeOrganism(Organism organism, DeathCause deathCause) {
@@ -114,11 +138,26 @@ public class World {
                         deathCause
                 )
         );
+        worldWriter.print(String.format(
+                "Organism %s at %s dies due to a cause '%s'",
+                organism.name(),
+                organism.getPosition().toString(),
+                deathCause
+        ));
         LOGGER.info(String.format("%s was removed", organism.toString()));
+        worldWriter.print(String.format("%s was removed", organism.toString()));
     }
 
     public void moveOrganism(Organism organism, Position destination) {
         LOGGER.info(
+                String.format(
+                        "Organism %s is trying to move from %s to %s",
+                        organism.name(),
+                        organism.getPosition().toString(),
+                        destination.toString()
+                )
+        );
+        worldWriter.print(
                 String.format(
                         "Organism %s is trying to move from %s to %s",
                         organism.name(),
@@ -138,6 +177,13 @@ public class World {
                     destination.toString()
                 )
             );
+            worldWriter.print(
+                    String.format(
+                            "Organism %s moved to an empty position %s",
+                            attacker.name(),
+                            destination.toString()
+                    )
+            );
         } else if (!organism.getClass().equals(defender.getClass())) {
             LOGGER.info(
                 String.format(
@@ -146,6 +192,14 @@ public class World {
                     defender.name(),
                     destination.toString()
                 )
+            );
+            worldWriter.print(
+                    String.format(
+                            "Organism %s attacks organism %s at %s",
+                            attacker.name(),
+                            defender.name(),
+                            destination.toString()
+                    )
             );
             final List<Action> actions = defender.defend(attacker);
 
@@ -160,6 +214,13 @@ public class World {
                         destination.toString()
                     )
                 );
+                worldWriter.print(
+                        String.format(
+                                "Organism %s moved to a position %s after winning the battle",
+                                attacker.name(),
+                                destination.toString()
+                        )
+                );
             }
         } else {
             LOGGER.info(
@@ -168,6 +229,13 @@ public class World {
                     attacker.name(),
                     destination.toString()
                 )
+            );
+            worldWriter.print(
+                    String.format(
+                            "Organism %s did not move to %s because there was an organism of the same species",
+                            attacker.name(),
+                            destination.toString()
+                    )
             );
         }
     }
@@ -204,10 +272,18 @@ public class World {
                         radius
                 )
         );
+        worldWriter.print(
+                String.format(
+                        "Freeze action was invoked at %s with radius %d",
+                        center.toString(),
+                        radius
+                )
+        );
         this.board.getNeighborOrganisms(center, radius)
             .forEach(o -> {
                 o.freeze();
                 LOGGER.info(String.format("%s was frozen", o.toString()));
+                worldWriter.print(String.format("%s was frozen", o.toString()));
             });
     }
 
@@ -219,10 +295,18 @@ public class World {
                         radius
                 )
         );
+        worldWriter.print(
+                String.format(
+                        "Unfreeze action was invoked at %s with radius %d",
+                        center.toString(),
+                        radius
+                )
+        );
         this.board.getNeighborOrganisms (center, radius)
             .forEach(o -> {
                 o.unfreeze();
                 LOGGER.info(String.format("%s was unfrozen", o.toString()));
+                worldWriter.print(String.format("%s was unfrozen", o.toString()));
             });
     }
 

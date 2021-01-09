@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class OrganismComparatorTest {
     @Test
     public void compareDifferentOrganismsTest() {
-        World world = new World(6, 6);
+        World world = new World(6, 6, 'c');
         Grass grass = new Grass(world, new Position(1, 1));
         Sheep sheep = new Sheep(world, new Position(2, 2));
         Wolf wolf = new Wolf(world, new Position(3, 3));
@@ -32,7 +32,7 @@ public class OrganismComparatorTest {
 
     @Test
     public void compareSameOrganismsTest() {
-        World world = new World(6, 6);
+        World world = new World(6, 6, 'c');
         Sheep sheep1 = new Sheep(world, new Position(1, 1));
         Sheep sheep2 = new Sheep(world, new Position(2, 2));
         Wolf wolf = new Wolf(world, new Position(3, 3));
@@ -52,7 +52,7 @@ public class OrganismComparatorTest {
 
     @Test
     public void noSameOrganismsInSetTest() {
-        World world = new World(6, 6);
+        World world = new World(6, 6, 'c');
         Grass grass = new Grass(world, new Position(1, 1));
         Sheep sheep = new Sheep(world, new Position(2, 2));
         Wolf wolf = new Wolf(world, new Position(3, 3));
