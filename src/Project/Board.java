@@ -23,7 +23,7 @@ public class Board {
     }
 
     public void addOrganism(Organism organism) {
-        final Organism o = Objects.requireNonNull(organism);
+        final Organism o = Objects.requireNonNull(organism, MessagesObjectNotNull.organismNull());
         final Position p = this.assertCorrectPosition(o.getPosition());
         final Organism destinationOrganism = this.map.get(p);
 
@@ -47,7 +47,7 @@ public class Board {
     }
 
     public void removeOrganism(Organism organism) {
-        final Organism o = Objects.requireNonNull(organism);
+        final Organism o = Objects.requireNonNull(organism, MessagesObjectNotNull.organismNull());
         final Position p = this.assertCorrectPosition(o.getPosition());
 
         if (this.map.get(p) == null) {
@@ -94,7 +94,7 @@ public class Board {
     }
 
     public Position assertCorrectPosition(Position position) {
-        final Position p = Objects.requireNonNull(position);
+        final Position p = Objects.requireNonNull(position, MessagesObjectNotNull.positionNull());
 
         if (!this.map.containsKey(p)) {
             throw new IllegalArgumentException(

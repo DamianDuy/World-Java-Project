@@ -35,11 +35,6 @@ public class Position {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(this.x, this.y);
-    }
-
-    @Override
     public String toString() {
         return String.format("(" + this.x + ", " + this.y + ")");
     }

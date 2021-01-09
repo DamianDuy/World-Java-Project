@@ -24,7 +24,7 @@ public class RandomEventManager {
         final List<Action> alienActions = this.createAlienEvents();
 
         if (alienActions != null) {
-            // Has to check if the alienAction is null to avoid NullPointerException when the board is full
+            // Has to check if the alienAction is null to avoid NullPointerException when the board is full.
             actions.addAll(alienActions);
         }
 

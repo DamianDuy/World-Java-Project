@@ -108,7 +108,7 @@ public class World {
                         destination.toString()
                 )
         );
-        final Organism attacker = Objects.requireNonNull(organism);
+        final Organism attacker = Objects.requireNonNull(organism, MessagesObjectNotNull.organismNull());
         final Organism defender = this.board.getOrganism(destination);
 
         if (defender == null || defender.isDead()) {
@@ -155,13 +155,13 @@ public class World {
     }
 
     public List<Position> getPossibleMovePositions(Organism organism) {
-        final Organism o = Objects.requireNonNull(organism);
+        final Organism o = Objects.requireNonNull(organism, MessagesObjectNotNull.organismNull());
 
         return this.board.getNeighborPositions(o.getPosition());
     }
 
     public List<Position> getFreeNeighborPositions(Organism organism) {
-        final Organism o = Objects.requireNonNull(organism);
+        final Organism o = Objects.requireNonNull(organism, MessagesObjectNotNull.organismNull());
 
         return this.board.getNeighborFreePositions(o.getPosition());
     }
