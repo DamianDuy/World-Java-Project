@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 public class World {
     private static final Logger LOGGER = Logger.getLogger(Main.DEBUG_LOGGER);
     private boolean started = false;
+    private boolean areRandomEvents = true;
     private int turnCounter = 1;
     private final int width;
     private final int height;
@@ -70,7 +71,9 @@ public class World {
         LOGGER.info("Organism corpses are being purged");
         this.purgeDead();
         LOGGER.info("Random events are happening now");
-        this.makeRandomEvents();
+        if (areRandomEvents) {
+            this.makeRandomEvents();
+        }
         this.organisms.addAll(this.newOrganisms);
         this.newOrganisms.clear();
         LOGGER.info(String.format("Turn %d ends", this.turnCounter));
@@ -176,6 +179,15 @@ public class World {
                 LOGGER.info(String.format("%s was unfrozen", o.toString()));
             });
     }
+
+    public void switchOnRandomEvents() {
+        this.areRandomEvents = true;
+    }
+
+    public void switchOffRandomEvents() {
+        this.areRandomEvents = false;
+    }
+
 
     @Override
     public String toString() {
