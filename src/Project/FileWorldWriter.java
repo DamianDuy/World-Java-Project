@@ -5,6 +5,8 @@ import java.io.*;
 public class FileWorldWriter implements WorldWriter {
     private boolean alreadyExecuted = false;
     private final String filename = "worldProgress.txt";
+
+    @Override
     public void print(String string) {
         if (!alreadyExecuted) {
             if (new File(filename).isFile()) {
