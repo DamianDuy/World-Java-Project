@@ -147,7 +147,7 @@ public class Board {
 
     private List<Position> selectNeighbors(Position position, Predicate<Position> predicate, int radius) {
         final Position p = this.assertCorrectPosition(position);
-        final ArrayList<Position> positions = new ArrayList<>();
+        final List<Position> positions = new ArrayList<>();
 
         for (int dy = -radius; dy <= radius; dy++) {
             for (int dx = -radius; dx <= radius; dx++) {

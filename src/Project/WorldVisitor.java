@@ -1,7 +1,5 @@
 package Project;
 
-import java.util.logging.Logger;
-
 public class WorldVisitor implements ActionVisitor {
     private final World world;
 
